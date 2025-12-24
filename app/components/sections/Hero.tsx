@@ -140,7 +140,7 @@ export default function Hero() {
 
           {/* Right: Photo Section with Abstract Frame */}
           <motion.div
-            className="relative order-1 lg:order-2 lg:col-span-5 flex justify-center mt-12 lg:mt-16"
+            className="relative order-1 lg:order-2 lg:col-span-5 flex justify-center mt-8 lg:mt-12"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
