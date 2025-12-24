@@ -140,15 +140,15 @@ export default function Hero() {
 
           {/* Right: Photo Section with Abstract Frame */}
           <motion.div
-            className="relative order-1 lg:order-2 lg:col-span-5 flex justify-center"
+            className="relative order-1 lg:order-2 lg:col-span-5 flex justify-center mt-12 lg:mt-16"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
           >
-            <div className="relative w-56 sm:w-64 md:w-72 lg:w-64 xl:w-72">
-              {/* Large abstract background square - Hidden on small screens */}
+            <div className="relative w-48 sm:w-56 md:w-64 lg:w-56 xl:w-64">
+              {/* Large abstract background square */}
               <motion.div
-                className="absolute -top-8 md:-top-12 -left-8 md:-left-12 w-32 h-32 md:w-40 md:h-40 border-2 border-black opacity-30 hidden sm:block"
+                className="absolute -top-8 md:-top-12 -left-8 md:-left-12 w-32 h-32 md:w-40 md:h-40 border-2 border-black opacity-30"
                 style={{
                   x: mousePosition.x * -0.8,
                   y: mousePosition.y * -0.8,
@@ -160,7 +160,7 @@ export default function Hero() {
 
               {/* Minimal geometric lines */}
               <motion.div
-                className="absolute -top-4 md:-top-6 -right-4 md:-right-6 w-16 h-16 md:w-20 md:h-20 border-t-4 border-r-4 border-black hidden sm:block"
+                className="absolute -top-4 md:-top-6 -right-4 md:-right-6 w-16 h-16 md:w-20 md:h-20 border-t-4 border-r-4 border-black"
                 style={{
                   x: mousePosition.x * 0.4,
                   y: mousePosition.y * 0.4,
@@ -171,7 +171,7 @@ export default function Hero() {
               />
 
               <motion.div
-                className="absolute -bottom-4 md:-bottom-6 -left-4 md:-left-6 w-12 h-12 md:w-16 md:h-16 bg-black hidden sm:block"
+                className="absolute -bottom-4 md:-bottom-6 -left-4 md:-left-6 w-12 h-12 md:w-16 md:h-16 bg-black"
                 style={{
                   x: mousePosition.x * 0.3,
                   y: mousePosition.y * 0.3,
@@ -181,9 +181,9 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 1.3 }}
               />
 
-              {/* Vertical accent lines - Hidden on small screens */}
+              {/* Vertical accent lines */}
               <motion.div
-                className="absolute top-0 -right-2 w-px h-24 md:h-32 bg-black hidden sm:block"
+                className="absolute top-0 -right-2 w-px h-24 md:h-32 bg-black"
                 style={{
                   y: mousePosition.y * 1.2,
                 }}
@@ -193,7 +193,7 @@ export default function Hero() {
               />
 
               <motion.div
-                className="absolute bottom-0 -left-2 w-px h-16 md:h-24 bg-gray-400 hidden sm:block"
+                className="absolute bottom-0 -left-2 w-px h-16 md:h-24 bg-gray-400"
                 style={{
                   y: mousePosition.y * -0.8,
                 }}
@@ -211,7 +211,7 @@ export default function Hero() {
                   transition: { duration: 0.3 }
                 }}
               >
-                <div className="relative aspect-[3/4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                <div className="relative aspect-[3/4] overflow-hidden md:grayscale md:hover:grayscale-0 transition-all duration-500">
                   <Image
                     src="/test.webp"
                     alt="Amri Sabilly"
@@ -232,9 +232,9 @@ export default function Hero() {
                 <div className="absolute -bottom-1 -right-1 w-4 h-4 md:w-6 md:h-6 border-b-2 border-r-2 border-white"></div>
               </motion.div>
 
-              {/* Small floating abstract elements - Hidden on mobile */}
+              {/* Small floating abstract elements */}
               <motion.div
-                className="absolute top-1/3 -left-6 md:-left-8 w-2 h-2 bg-black rounded-full hidden sm:block"
+                className="absolute top-1/3 -left-6 md:-left-8 w-2 h-2 bg-black rounded-full"
                 animate={{
                   y: [0, -15, 0],
                   scale: [1, 1.2, 1],
@@ -247,7 +247,7 @@ export default function Hero() {
               />
 
               <motion.div
-                className="absolute top-2/3 -right-6 md:-right-8 w-3 h-3 border border-black hidden sm:block"
+                className="absolute top-2/3 -right-6 md:-right-8 w-3 h-3 border border-black"
                 animate={{
                   y: [0, 15, 0],
                   rotate: [0, 90, 180, 270, 360],
@@ -260,7 +260,7 @@ export default function Hero() {
               />
 
               <motion.div
-                className="absolute bottom-1/4 -left-8 md:-left-10 w-1 h-8 md:h-12 bg-gray-300 hidden sm:block"
+                className="absolute bottom-1/4 -left-8 md:-left-10 w-1 h-8 md:h-12 bg-gray-300"
                 animate={{
                   scaleY: [1, 1.3, 1],
                   opacity: [0.3, 0.8, 0.3],
@@ -277,7 +277,7 @@ export default function Hero() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2 hidden lg:flex flex-col items-center gap-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
