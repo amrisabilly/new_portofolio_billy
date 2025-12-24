@@ -9,8 +9,8 @@ const skillCategories = [
   {
     title: 'Frontend',
     skills: [
-      'React', 'Next.js', 'TypeScript', 'Tailwind CSS',
-      'Flutter','Kotlin', 'HTML5', 'CSS3', 'JavaScript','Laravel Blade'
+      'React', 'Next.js', 'Laravel Blade','Tailwind CSS',
+      'HTML5', 'CSS3', 'JavaScript',
     ]
   },
   {
@@ -20,9 +20,15 @@ const skillCategories = [
     ]
   },
   {
+    title: 'Mobile Development',
+    skills: [
+      'Kotlin', 'Flutter', 'Dart'
+    ]
+  },
+  {
     title: 'Tools & Technologies',
     skills: [
-      'Git','VS Code', 'Figma', 'Termius', 'CI/CD'
+      'Git', 'VS Code', 'Figma', 'Termius', 'CI/CD'
     ]
   }
 ];
@@ -58,7 +64,7 @@ export default function Skills() {
         </FadeIn>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}

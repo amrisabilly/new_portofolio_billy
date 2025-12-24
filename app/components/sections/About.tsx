@@ -61,13 +61,12 @@ export default function About() {
           {/* Right: Content */}
           <FadeIn direction="right" delay={200}>
             <div className="space-y-6">
-              <p className='text-lg md:text-xl leading-relaxed text-gray-300'>I'm a passionate <span className='font-semibold text-white'>software developer</span>who bridges the gap between technology and business requirements. My expertise goes beyond software and hardware development, I also specialize in project management to ensure every system built delivers tangible value to the organization.</p>
+              <p className='text-lg md:text-xl leading-relaxed text-gray-300'>I'm a passionate <span className='font-semibold text-white'>software developer</span> bridging technology and business. I specialize in development and project management to deliver systems that create real value.</p>
               
-              <p className='text-lg md:text-xl leading-relaxed text-gray-300'>With a strong foundation in both frontend and backend development, I create scalable web applications and seamless user experiences through clean, maintainable code. My background in business management allows me to view technology as a strategic solution to enhance operational efficiency.</p>
+              <p className='text-lg md:text-xl leading-relaxed text-gray-300'>With expertise in full-stack development, I build scalable applications through clean code. My business background enables me to craft technology as strategic solutions.</p>
 
               <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                I believe in continuous learning and staying updated with the latest technologies 
-                to deliver <span className="italic">innovative solutions</span> that make a difference.
+                I believe in continuous learning to deliver <span className="italic">innovative solutions</span> that make a difference.
               </p>
 
               {/* Stats */}

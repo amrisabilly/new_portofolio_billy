@@ -7,10 +7,10 @@ import Button from '../ui/Button';
 import FadeIn from '../ui/FadeIn';
 
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com/yourusername' },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
-  { name: 'Twitter', url: 'https://twitter.com/yourusername' },
-  { name: 'Email', url: 'mailto:amrisabilly@example.com' }
+  { name: 'GitHub', url: 'https://github.com/amrisabilly' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/amri-sabilly-1a2a44319/' },
+  { name: 'Twitter', url: 'https://x.com/queenbee973569' },
+  { name: 'Email', url: 'mailto:amrsabill@gmail.com' }
 ];
 
 export default function Contact() {
@@ -100,7 +100,7 @@ export default function Contact() {
                   className="text-2xl md:text-3xl font-bold block mb-6 hover:italic transition-all"
                   whileHover={{ x: 10 }}
                 >
-                  amrisabilly@example.com
+                  amrsabill@gmail.com
                 </motion.a>
                 <Button variant="primary" href="mailto:amrisabilly@example.com">
                   Send Message

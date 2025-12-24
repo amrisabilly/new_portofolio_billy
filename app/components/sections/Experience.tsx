@@ -7,46 +7,68 @@ import FadeIn from '../ui/FadeIn';
 
 const experiences = [
   {
-    role: 'Senior Software Engineer',
-    company: 'Tech Innovations Inc.',
-    period: '2022 - Present',
-    description: 'Leading development of scalable web applications using modern tech stack. Mentoring junior developers and architecting cloud-native solutions.',
+    role: 'Fullstack Developer',
+    company: 'Naga Cargo',
+    period: '2025 - Present',
+    description: 'Developing end-to-end solutions for cargo management system, handling both web and mobile application development.',
     achievements: [
-      'Increased system performance by 60%',
-      'Led team of 5 developers',
-      'Migrated legacy systems to microservices'
+      'Built cargo management website',
+      'Developed mobile application',
+      'Implemented full-stack solutions'
     ]
   },
   {
-    role: 'Full Stack Developer',
-    company: 'Digital Solutions Co.',
-    period: '2020 - 2022',
-    description: 'Developed and maintained multiple client projects, focusing on React and Node.js applications with emphasis on user experience.',
+    role: 'Backend Developer',
+    company: 'PT Berbinar Insightfull',
+    period: '2024 - Present',
+    description: 'Developing and maintaining backend systems for various web applications including psychological testing, e-learning, and internal staff management platforms.',
     achievements: [
-      'Delivered 15+ client projects',
-      'Reduced load times by 40%',
-      'Implemented CI/CD pipelines'
+      'Built psychological testing website',
+      'Developed e-learning platform',
+      'Created internal staff management website'
+    ]
+  },
+  {
+    role: 'Frontend Mentor',
+    company: 'KSM Code 124',
+    period: '2024 - Present',
+    description: 'Mentoring students in frontend web development, guiding them through modern web technologies and best practices.',
+    achievements: [
+      'Taught frontend development fundamentals',
+      'Guided students in building web projects',
+      'Shared industry best practices and modern tools'
+    ]
+  },
+  {
+    role: 'Vice Chairman of the Website Community',
+    company: 'Himasisfo UPNYK',
+    period: '2023 - 2024',
+    description: 'Led website community initiatives and coordinated team efforts to build and maintain organizational web presence.',
+    achievements: [
+      'Built KSM Himasisfo website',
+      'Coordinated website development team',
+      'Managed website community activities'
     ]
   },
   {
     role: 'Frontend Developer',
-    company: 'Creative Studio',
-    period: '2019 - 2020',
+    company: 'Himasisfo UPNYK',
+    period: '2023 - 2024',
     description: 'Built responsive and accessible web interfaces. Collaborated with designers to transform mockups into pixel-perfect implementations.',
     achievements: [
-      'Built 20+ responsive websites',
-      'Improved accessibility scores',
-      'Established component library'
+      'Built responsive and interactive websites ',
+      'Optimized performance and accessibility',
+      'Developed reusable UI components'
     ]
   }
 ];
 
 const education = [
   {
-    degree: 'Bachelor of Computer Science',
-    institution: 'University Name',
-    period: '2015 - 2019',
-    details: 'Graduated with Honors. Focus on Software Engineering and Web Development.'
+    degree: 'Bachelor of Information Systems',
+    institution: 'UPN Veteran Yogyakarta',
+    period: '2023 - now',
+    details: 'Graduated with Honors. Focus on Information Systems, Business Analysis, and Application Development.'
   }
 ];
 
@@ -89,7 +111,7 @@ export default function Experience() {
           <div className="space-y-12">
             {experiences.map((exp, idx) => (
               <motion.div
-                key={exp.company}
+                key={`${exp.company}-${exp.role}-${idx}`}
                 className="relative pl-8 border-l-2 border-gray-700 hover:border-white transition-colors duration-300"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
