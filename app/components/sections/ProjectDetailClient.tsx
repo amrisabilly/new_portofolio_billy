@@ -103,7 +103,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                   {project.mockups.map((mockup, idx) => (
                     <motion.div
                       key={idx}
-                      className="relative border-2 border-black overflow-hidden grayscale hover:grayscale-0 transition-all duration-500"
+                      className="relative border-2 border-black overflow-hidden transition-all duration-500"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
