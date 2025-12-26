@@ -19,18 +19,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'ecommerce-platform',
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution with real-time inventory management, secure payment processing, and an intuitive admin dashboard.',
-    longDescription: 'A comprehensive e-commerce platform built with modern technologies, featuring real-time inventory management, secure payment integration with Stripe, and a powerful admin dashboard for managing products, orders, and customers. The platform includes advanced features like product recommendations, wish lists, and detailed analytics.',
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Prisma', 'TailwindCSS'],
-    category: 'Web Application',
-    year: '2024',
-    duration: '4 months',
-    role: 'Full Stack Developer',
+    id: 'naga-cargo-indonesia',
+    title: 'Naga Cargo Indonesia Delivery System',
+    description: 'Sistem aplikasi mobile dan dashboard web untuk monitoring pengiriman dan bukti foto kurir di seluruh Indonesia untuk Naga Cargo Indonesia (JNE Cargo).',
+    longDescription: 'Project pihak ketiga bersama Naga Cargo Indonesia (JNE Cargo) sebagai Fullstack Developer. Saya membangun aplikasi mobile (Flutter/Dart) yang digunakan kurir untuk mengunggah bukti foto pengiriman di seluruh Indonesia sesuai wilayah tugas. Aplikasi ini hanya dapat digunakan di wilayah yang ditentukan, sudah mendukung kompresi gambar agar ukuran file kecil namun tetap jelas, serta dapat digunakan secara offline (tanpa jaringan). Selain itu, saya juga membangun website dashboard (Laravel Blade) untuk monitoring aktivitas kurir dan data PIC. Sistem ini menggunakan API untuk integrasi antara aplikasi dan website, memastikan proses pengiriman dan monitoring berjalan efisien dan real-time.',
+    technologies: ['Flutter', 'Dart', 'Laravel', 'Blade', 'REST API', 'MySQL'],
+    category: 'Logistics & Delivery',
+    year: '2025',
+    duration: '6 bulan',
+    role: 'Fullstack Developer',
     link: '#',
-    repository: 'https://github.com/yourusername/ecommerce-platform',
-    liveDemo: 'https://demo-ecommerce.vercel.app',
+    repository: undefined,
+    liveDemo: 'https://monitoringweb.decoratics.id/',
     mockups: [
       '/portofolio/naga_cargo/porto1.webp',
       '/portofolio/naga_cargo/porto2.webp',
@@ -38,17 +38,18 @@ export const projects: Project[] = [
       '/portofolio/naga_cargo/porto4.webp'
     ],
     features: [
-      'Real-time inventory management',
-      'Secure payment processing with Stripe',
-      'Admin dashboard with analytics',
-      'Product search and filtering',
-      'Shopping cart and wishlist',
-      'Order tracking system',
-      'Customer reviews and ratings',
-      'Responsive mobile design'
+      'Aplikasi mobile untuk kurir upload bukti foto pengiriman',
+      'Dashboard web monitoring aktivitas kurir & data PIC',
+      'Integrasi API antara aplikasi dan website',
+      'Tracking pengiriman secara real-time',
+      'Manajemen wilayah tugas kurir (aplikasi hanya aktif di wilayah tertentu)',
+      'Kompresi gambar otomatis agar file kecil dan tetap jelas',
+      'Dukungan offline mode (tanpa jaringan)',
+      'Notifikasi status pengiriman',
+      'Laporan dan rekap data pengiriman'
     ],
-    challenges: 'Managing real-time inventory updates across multiple concurrent users while maintaining data consistency and preventing overselling.',
-    solutions: 'Implemented optimistic locking with PostgreSQL and real-time WebSocket connections for instant inventory updates. Used Redis for caching frequently accessed product data.'
+    challenges: 'Mengelola upload bukti foto dari banyak kurir di berbagai wilayah secara real-time, memastikan aplikasi hanya aktif di wilayah tugas, kompresi gambar efisien, dan sinkronisasi data saat offline.',
+    solutions: 'Menerapkan REST API terpusat, sistem autentikasi aman, validasi lokasi wilayah, kompresi gambar di sisi aplikasi, serta sinkronisasi data otomatis saat jaringan tersedia. Dashboard monitoring untuk memastikan transparansi proses pengiriman.'
   },
   {
     id: 'task-management-app',

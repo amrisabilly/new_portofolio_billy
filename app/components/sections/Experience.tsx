@@ -29,17 +29,6 @@ const experiences = [
     ]
   },
   {
-    role: 'Frontend Mentor',
-    company: 'KSM Code 124',
-    period: '2024 - Present',
-    description: 'Mentoring students in frontend web development, guiding them through modern web technologies and best practices.',
-    achievements: [
-      'Taught frontend development fundamentals',
-      'Guided students in building web projects',
-      'Shared industry best practices and modern tools'
-    ]
-  },
-  {
     role: 'Vice Chairman of the Website Community',
     company: 'Himasisfo UPNYK',
     period: '2023 - 2024',
