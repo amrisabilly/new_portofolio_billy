@@ -29,7 +29,7 @@ export const certificates: Certificate[] = [
     year: '2025',
     shortId: '432/08/018.432/BII/VI/2029',
     description: 'Certificate of Achievement awarded for outstanding contribution and exceptional performance as Web and Mobile Apps Developer Staff at PT Berbinar Insightful Indonesia. This recognition acknowledges dedication, technical excellence, and significant impact in developing web and mobile applications. Given in May 2025 by Danny Sanjaya Arfensia, S.Psi., M.Psi., Psikolog - CEO of PT Berbinar Insightful Indonesia.',
-    image: '/sertifikasi/employee_month.webp',
+    image: '/sertifikasi/motm.webp',
     credentialUrl: 'https://berbinar.co.id',
     skills: ['Web Development', 'Mobile Apps Development', 'Outstanding Performance', 'Team Contribution', 'Technical Excellence', 'Professional Achievement']
   },

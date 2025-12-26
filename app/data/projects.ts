@@ -32,10 +32,10 @@ export const projects: Project[] = [
     repository: 'https://github.com/yourusername/ecommerce-platform',
     liveDemo: 'https://demo-ecommerce.vercel.app',
     mockups: [
-      '/projects/ecommerce/mockup-1.jpg',
-      '/projects/ecommerce/mockup-2.jpg',
-      '/projects/ecommerce/mockup-3.jpg',
-      '/projects/ecommerce/mockup-4.jpg'
+      '/portofolio/naga_cargo/porto1.webp',
+      '/portofolio/naga_cargo/porto2.webp',
+      '/portofolio/naga_cargo/porto3.webp',
+      '/portofolio/naga_cargo/porto4.webp'
     ],
     features: [
       'Real-time inventory management',
