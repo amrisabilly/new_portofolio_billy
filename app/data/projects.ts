@@ -52,98 +52,38 @@ export const projects: Project[] = [
     solutions: 'Menerapkan REST API terpusat, sistem autentikasi aman, validasi lokasi wilayah, kompresi gambar di sisi aplikasi, serta sinkronisasi data otomatis saat jaringan tersedia. Dashboard monitoring untuk memastikan transparansi proses pengiriman.'
   },
   {
-    id: 'task-management-app',
-    title: 'Task Management App',
-    description: 'Collaborative project management tool with real-time updates, team collaboration features, and advanced analytics.',
-    longDescription: 'A powerful task management application designed for teams, featuring real-time collaboration, drag-and-drop task boards, time tracking, and comprehensive project analytics. Built with modern technologies to ensure smooth performance and seamless user experience.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Express', 'Redux'],
-    category: 'Productivity Tool',
+    id: 'berbinar-insightful-indonesia',
+    title: 'Berbinar Insightful Indonesia',
+    description: 'Website utama dan ekosistem digital untuk perusahaan psikologi Berbinar Insightful Indonesia, meliputi pemasaran, data staff, e-learning, dan layanan psikolog.',
+    longDescription: 'Saya berperan sebagai Backend Developer dalam pengembangan ekosistem digital Berbinar Insightful Indonesia, sebuah perusahaan psikologi. Proyek ini meliputi pembuatan website bisnis utama (main repositories) untuk pemasaran, website staff untuk pengelolaan data karyawan, BerbinarPlus untuk e-learning, serta website layanan psikolog. Pengembangan backend menggunakan Laravel dan menerapkan CI/CD dengan GitHub Workflow, deployment menggunakan Termius, serta layanan hosting. Sistem ini dirancang untuk mendukung kebutuhan bisnis, edukasi, dan layanan psikologi secara terintegrasi dan efisien.',
+    technologies: ['Laravel', 'PHP', 'CI/CD', 'GitHub Workflow', 'Termius', 'Hosting'],
+    category: 'Psychology & Business',
     year: '2024',
-    duration: '3 months',
-    role: 'Frontend Lead',
+    duration: '6 bulan',
+    role: 'Backend Developer',
     link: '#',
-    repository: 'https://github.com/yourusername/task-manager',
-    liveDemo: 'https://demo-taskmanager.vercel.app',
+    repository: undefined,
+    liveDemo: 'https://berbinar.in/',
     mockups: [
-      '/projects/taskmanager/mockup-1.jpg',
-      '/projects/taskmanager/mockup-2.jpg',
-      '/projects/taskmanager/mockup-3.jpg'
+      '/portofolio/berbinar/porto4.webp',
+      '/portofolio/berbinar/porto2.webp',
+      '/portofolio/berbinar/porto3.webp'
     ],
     features: [
-      'Real-time collaborative editing',
-      'Drag-and-drop task boards',
-      'Team member assignments',
-      'Time tracking and reporting',
-      'File attachments',
-      'Activity timeline',
-      'Custom task labels and priorities',
-      'Email notifications'
+      'Website utama pemasaran perusahaan psikologi',
+      'Website staff untuk manajemen data karyawan',
+      'BerbinarPlus untuk e-learning',
+      'Website layanan psikolog',
+      'Integrasi multi-platform',
+      'CI/CD dengan GitHub Workflow',
+      'Deployment otomatis via Termius',
+      'Manajemen user dan autentikasi',
+      'Dashboard administrasi',
+      'Layanan hosting'
     ],
-    challenges: 'Ensuring real-time synchronization across multiple users without conflicts or data loss.',
-    solutions: 'Implemented operational transformation algorithms and Socket.io for real-time bidirectional communication. Used MongoDB change streams for detecting and broadcasting updates.'
+    challenges: 'Membangun ekosistem digital terintegrasi untuk berbagai kebutuhan (bisnis, staff, e-learning, layanan psikolog) dengan keamanan dan efisiensi tinggi.',
+    solutions: 'Menggunakan Laravel untuk backend yang modular, CI/CD GitHub Workflow untuk deployment otomatis, serta Termius dan layanan hosting untuk pengelolaan server yang efisien dan aman.'
   },
-  {
-    id: 'ai-content-generator',
-    title: 'AI Content Generator',
-    description: 'AI-powered content generation platform leveraging GPT models for creating marketing copy, blog posts, and social media content.',
-    longDescription: 'An innovative AI-powered platform that helps content creators and marketers generate high-quality content using advanced GPT models. Features include multi-language support, tone customization, SEO optimization suggestions, and content templates for various use cases.',
-    technologies: ['Python', 'FastAPI', 'OpenAI', 'React', 'PostgreSQL', 'Docker'],
-    category: 'AI Application',
-    year: '2023',
-    duration: '5 months',
-    role: 'Full Stack Developer',
-    link: '#',
-    repository: 'https://github.com/yourusername/ai-content-generator',
-    liveDemo: 'https://demo-aicontent.vercel.app',
-    mockups: [
-      '/projects/ai-content/mockup-1.jpg',
-      '/projects/ai-content/mockup-2.jpg',
-      '/projects/ai-content/mockup-3.jpg'
-    ],
-    features: [
-      'AI-powered content generation',
-      'Multiple content templates',
-      'Tone and style customization',
-      'SEO optimization suggestions',
-      'Multi-language support',
-      'Content history and versioning',
-      'Export to various formats',
-      'API integration'
-    ],
-    challenges: 'Managing API rate limits and costs while providing a smooth user experience.',
-    solutions: 'Implemented intelligent caching, request queuing, and token optimization strategies. Added user tier system with appropriate limits.'
-  },
-  {
-    id: 'portfolio-cms',
-    title: 'Portfolio CMS',
-    description: 'Headless CMS built for creative professionals to showcase their work with customizable templates and SEO optimization.',
-    longDescription: 'A flexible headless CMS specifically designed for creative professionals, artists, and designers. Features drag-and-drop page builder, customizable templates, image optimization, and built-in SEO tools to help creatives showcase their work professionally.',
-    technologies: ['Next.js', 'Sanity.io', 'Tailwind', 'Vercel', 'TypeScript'],
-    category: 'Content Management',
-    year: '2023',
-    duration: '3 months',
-    role: 'Lead Developer',
-    link: '#',
-    repository: 'https://github.com/yourusername/portfolio-cms',
-    liveDemo: 'https://demo-portfoliocms.vercel.app',
-    mockups: [
-      '/projects/portfolio-cms/mockup-1.jpg',
-      '/projects/portfolio-cms/mockup-2.jpg',
-      '/projects/portfolio-cms/mockup-3.jpg'
-    ],
-    features: [
-      'Drag-and-drop page builder',
-      'Customizable templates',
-      'Image optimization',
-      'SEO optimization tools',
-      'Custom domain support',
-      'Analytics integration',
-      'Contact form builder',
-      'Responsive design'
-    ],
-    challenges: 'Creating an intuitive drag-and-drop interface that works seamlessly across different screen sizes.',
-    solutions: 'Used React DnD library with custom hooks and context for state management. Implemented responsive breakpoint previews.'
-  }
 ];
 
 export function getProjectById(id: string): Project | undefined {
