@@ -58,7 +58,7 @@ export const projects: Project[] = [
     longDescription: 'Saya berperan sebagai Backend Developer dalam pengembangan ekosistem digital Berbinar Insightful Indonesia, sebuah perusahaan psikologi. Proyek ini meliputi pembuatan website bisnis utama (main repositories) untuk pemasaran, website staff untuk pengelolaan data karyawan, BerbinarPlus untuk e-learning, serta website layanan psikolog. Pengembangan backend menggunakan Laravel dan menerapkan CI/CD dengan GitHub Workflow, deployment menggunakan Termius, serta layanan hosting. Sistem ini dirancang untuk mendukung kebutuhan bisnis, edukasi, dan layanan psikologi secara terintegrasi dan efisien.',
     technologies: ['Laravel', 'PHP', 'CI/CD', 'GitHub Workflow', 'Termius', 'Hosting'],
     category: 'Psychology & Business',
-    year: '2024',
+    year: '2025',
     duration: '6 bulan',
     role: 'Backend Developer',
     link: '#',
@@ -83,6 +83,40 @@ export const projects: Project[] = [
     ],
     challenges: 'Membangun ekosistem digital terintegrasi untuk berbagai kebutuhan (bisnis, staff, e-learning, layanan psikolog) dengan keamanan dan efisiensi tinggi.',
     solutions: 'Menggunakan Laravel untuk backend yang modular, CI/CD GitHub Workflow untuk deployment otomatis, serta Termius dan layanan hosting untuk pengelolaan server yang efisien dan aman.'
+  },
+  {
+    id: 'kopi-kelana',
+    title: 'Kopi Kelana - Coffee Shop App',
+    description: 'Aplikasi mobile coffee shop dengan fitur pemesanan kopi, janjian ngopi lintas waktu, konversi harga mata uang asing, rekomendasi menu, dan gamifikasi poin untuk voucher diskon.',
+    longDescription: 'Sebagai Fullstack Developer, saya membangun aplikasi Kopi Kelana menggunakan Flutter untuk frontend dan Laravel sebagai backend API. Aplikasi ini memungkinkan pelanggan memesan kopi secara online, memilih menu spesial "Janjian Kopi" untuk menentukan waktu ngopi bersama lintas zona waktu, serta fitur konversi harga otomatis jika pelanggan menggunakan mata uang asing ke Rupiah. Sistem akan merekomendasikan menu sesuai harga setelah konversi. Selain itu, terdapat fitur gamifikasi: pelanggan mengumpulkan poin dari transaksi yang dapat ditukar dengan voucher diskon. Backend Laravel mengelola data menu, transaksi, user, konversi mata uang, dan sistem gamifikasi.',
+    technologies: ['Flutter', 'Dart', 'Laravel', 'REST API', 'MySQL'],
+    category: 'Food & Beverage',
+    year: '2025',
+    duration: '5 bulan',
+    role: 'Fullstack Developer',
+    link: '#',
+    repository: 'https://github.com/amrisabilly/aplikasi_coffee_shop.git',
+    liveDemo: undefined,
+    mockups: [
+      '/portofolio/coffe/porto1.webp',
+      '/portofolio/coffe/porto2.webp',
+      '/portofolio/coffe/porto3.webp',
+      '/portofolio/coffe/porto4.webp'
+    ],
+    features: [
+      'Pemesanan kopi online via aplikasi',
+      'Menu spesial "Janjian Kopi" untuk menentukan waktu ngopi lintas zona waktu',
+      'Konversi harga otomatis dari mata uang asing ke Rupiah',
+      'Rekomendasi menu sesuai harga setelah konversi',
+      'Gamifikasi: pengumpulan poin dari transaksi',
+      'Penukaran poin menjadi voucher diskon',
+      'Manajemen menu, transaksi, dan user',
+      'Integrasi API antara aplikasi dan backend',
+      'Notifikasi status pesanan',
+      'Dashboard admin untuk monitoring data'
+    ],
+    challenges: 'Membangun sistem konversi harga real-time, fitur janjian lintas waktu, dan gamifikasi yang terintegrasi dengan transaksi serta menjaga performa aplikasi.',
+    solutions: 'Menggunakan API kurs mata uang untuk konversi real-time, logika penjadwalan waktu lintas zona, serta sistem gamifikasi terintegrasi di backend. Backend Laravel mengelola seluruh data dan logika bisnis.'
   },
 ];
 
