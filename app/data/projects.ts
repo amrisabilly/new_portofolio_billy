@@ -91,7 +91,7 @@ export const projects: Project[] = [
     longDescription: 'Sebagai Fullstack Developer, saya membangun aplikasi Kopi Kelana menggunakan Flutter untuk frontend dan Laravel sebagai backend API. Aplikasi ini memungkinkan pelanggan memesan kopi secara online, memilih menu spesial "Janjian Kopi" untuk menentukan waktu ngopi bersama lintas zona waktu, serta fitur konversi harga otomatis jika pelanggan menggunakan mata uang asing ke Rupiah. Sistem akan merekomendasikan menu sesuai harga setelah konversi. Selain itu, terdapat fitur gamifikasi: pelanggan mengumpulkan poin dari transaksi yang dapat ditukar dengan voucher diskon. Backend Laravel mengelola data menu, transaksi, user, konversi mata uang, dan sistem gamifikasi.',
     technologies: ['Flutter', 'Dart', 'Laravel', 'REST API', 'MySQL'],
     category: 'Food & Beverage',
-    year: '2025',
+    year: '2024',
     duration: '5 bulan',
     role: 'Fullstack Developer',
     link: '#',
@@ -117,6 +117,41 @@ export const projects: Project[] = [
     ],
     challenges: 'Membangun sistem konversi harga real-time, fitur janjian lintas waktu, dan gamifikasi yang terintegrasi dengan transaksi serta menjaga performa aplikasi.',
     solutions: 'Menggunakan API kurs mata uang untuk konversi real-time, logika penjadwalan waktu lintas zona, serta sistem gamifikasi terintegrasi di backend. Backend Laravel mengelola seluruh data dan logika bisnis.'
+  },
+  {
+    id: 'hima-sistem-informasi',
+    title: 'Website Himpunan Mahasiswa Sistem Informasi',
+    description: 'Website komunitas Himpunan Mahasiswa Sistem Informasi dengan fitur Spotify, panduan mahasiswa, halaman penjualan, dan lainnya.',
+    longDescription: 'Sebagai Frontend Developer, saya mengembangkan website komunitas untuk Himpunan Mahasiswa Sistem Informasi menggunakan Laravel Inertia. Website ini menyediakan berbagai fitur seperti integrasi Spotify untuk playlist komunitas, panduan mahasiswa baru, halaman penjualan merchandise, serta berbagai informasi kegiatan dan layanan himpunan. Pengembangan frontend menggunakan Inertia.js dan backend menggunakan MySQL untuk pengelolaan data. Website ini bertujuan untuk meningkatkan engagement anggota dan memudahkan akses informasi serta layanan secara digital.',
+    technologies: ['Laravel', 'Inertia.js', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+    category: 'Community & Education',
+    year: '2024',
+    duration: '4 bulan',
+    role: 'Frontend Developer',
+    link: '#',
+    repository: undefined,
+    liveDemo: undefined,
+    mockups: [
+      '/portofolio/hima/porto1.webp',
+      '/portofolio/hima/porto2.webp',
+      '/portofolio/hima/porto3.webp',
+      '/portofolio/hima/porto4.webp',
+      '/portofolio/hima/porto5.webp',
+      '/portofolio/hima/porto6.webp',
+      '/portofolio/hima/porto7.webp'
+    ],
+    features: [
+      'Integrasi Spotify playlist komunitas',
+      'Panduan mahasiswa baru',
+      'Halaman penjualan merchandise',
+      'Informasi kegiatan dan event himpunan',
+      'Manajemen konten dinamis',
+      'Dashboard admin untuk pengelolaan data',
+      'Autentikasi anggota',
+      'Desain responsif dan modern'
+    ],
+    challenges: 'Mengintegrasikan fitur Spotify, membangun sistem manajemen konten yang mudah digunakan, dan memastikan website tetap responsif serta mudah diakses oleh seluruh anggota.',
+    solutions: 'Menggunakan Laravel Inertia untuk frontend yang interaktif, integrasi API Spotify, serta desain UI/UX yang ramah pengguna dan mobile-friendly.'
   },
 ];
 
