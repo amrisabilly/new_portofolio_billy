@@ -12,6 +12,17 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
+    id: 'fundamental-project-management-fga-2025',
+    title: 'Fundamental Project Management',
+    issuer: 'Fresh Graduate Academy - Digital Talent Scholarship',
+    year: '2025',
+    shortId: '19511214840-1662/FGA/BLSDM.Komdigi/2025',
+    description: 'Certificate of Training awarded for successfully completing the Fundamental Project Management training as part of the Fresh Graduate Academy, Digital Talent Scholarship 2025. Organized by the Center for Digital Talent Development, the training was held from October 21-27, 2025, for a total of 10 hours. This certificate recognizes the achievement in mastering essential project management concepts and practices for digital talent development.',
+    image: '/sertifikasi/project.webp',
+    credentialUrl: '',
+    skills: ['Project Management', 'Digital Talent', 'Fundamental Skills', 'Training', 'Fresh Graduate Academy']
+  },
+  {
     id: 'alibaba-cloud-certified-developer',
     title: 'Alibaba Cloud Certified Developer',
     issuer: 'Alibaba Cloud',
@@ -35,66 +46,66 @@ export const certificates: Certificate[] = [
   },
   {
     id: 'wakil-ketua-staf-frontend-developer',
-    title: 'Wakil Ketua dan Staf Front-end Developer',
+    title: 'Vice Chair and Front-end Developer Staff',
     issuer: 'HIMASISFO UPN Veteran Yogyakarta',
     year: '2025',
     shortId: '013/A/SF/KOMUNITASWEBSITE/HIMASISFO/II/2025',
-    description: 'Sertifikat apresiasi sebagai bentuk penghargaan atas kontribusi yang luar biasa serta dedikasi yang tinggi dalam proses pengembangan dan pengelolaan website HIMASISFO. Usaha dan kerja keras telah memberikan kontribusi signifikan dalam meningkatkan kualitas, fungsi, dan kemudahan penggunaan platform. Diberikan di Yogyakarta pada tanggal 27 Januari 2025.',
+    description: 'Certificate of appreciation as a form of recognition for outstanding contribution and high dedication in the development and management process of the HIMASISFO website. The effort and hard work have made a significant impact in improving the quality, functionality, and user-friendliness of the platform. Awarded in Yogyakarta on January 27, 2025.',
     image: '/sertifikasi/apresiasi_hima.webp',
     credentialUrl: 'https://himasisfo.upnyk.ac.id',
     skills: ['Frontend Development', 'Web Development', 'Team Leadership', 'Website Management', 'UI/UX Implementation', 'Project Coordination']
   },
   {
     id: 'belajar-dasar-ai',
-    title: 'Belajar Dasar AI',
+    title: 'AI Fundamentals',
     issuer: 'Dicoding Indonesia',
     year: '2023',
     shortId: 'DCOD-AI-002',
-    description: 'Kelas untuk pemula yang ingin memulai karier di dunia AI. Materi mencakup konsep dasar Artificial Intelligence (AI), data untuk AI dan pemanfaatannya dalam pengembangan AI, pengantar Machine Learning sebagai bagian dari AI beserta contoh penerapannya, serta Deep Learning dengan konsep penting dan implementasi penerapannya. Di akhir kelas, siswa mampu menelaah berbagai konsep dasar dalam AI beserta penerapannya dengan baik.',
+    description: 'Beginner-level course for those starting a career in AI. The material covers basic concepts of Artificial Intelligence (AI), data for AI and its utilization in AI development, an introduction to Machine Learning as part of AI with practical examples, and Deep Learning with key concepts and implementation. By the end of the course, students are able to analyze various fundamental AI concepts and their applications effectively.',
     image: '/sertifikasi/belajar_ai.webp',
     credentialUrl: 'https://www.dicoding.com/certificates',
     skills: ['Artificial Intelligence', 'Machine Learning', 'Deep Learning', 'Data Science', 'AI Concepts', 'ML Basics']
   },
   {
     id: 'belajar-membuat-aplikasi-web-react',
-    title: 'Belajar Membuat Aplikasi Web dengan React',
+    title: 'Building Web Applications with React',
     issuer: 'Dicoding Indonesia',
     year: '2025',
     shortId: 'DCOD-REACT-003',
-    description: 'Kelas untuk Front-End Web Developer yang ingin mengembangkan website dengan komponen UI yang reusable, deklaratif, dan reaktif terhadap perubahan data. Materi mencakup pengenalan React dan ekosistemnya, konsep dasar React (composition, declarative code, unidirectional data flow), React UI Component (element, component, dan properti), serta Stateful Component (class component, state, controlled component). Di akhir kelas, siswa dapat membuat aplikasi web dengan React menggunakan functional component, stateful component, dan controlled component.',
+    description: 'Course for Front-End Web Developers who want to build websites with reusable, declarative, and reactive UI components. The material covers an introduction to React and its ecosystem, basic React concepts (composition, declarative code, unidirectional data flow), React UI Components (elements, components, and props), as well as Stateful Components (class components, state, controlled components). By the end of the course, students can build web applications with React using functional components, stateful components, and controlled components.',
     image: '/sertifikasi/belajar_react.webp',
     credentialUrl: 'https://www.dicoding.com/certificates',
     skills: ['React.js', 'Component', 'Props', 'State', 'Controlled Component', 'Functional Component']
   },
   {
     id: 'belajar-dasar-pemrograman-javascript',
-    title: 'Belajar Dasar Pemrograman JavaScript',
+    title: 'JavaScript Programming Fundamentals',
     issuer: 'Dicoding Indonesia',
     year: '2025',
     shortId: 'DCOD-JS-004',
-    description: 'Kelas untuk individu yang ingin menjadi Web Developer/Back-end developer menggunakan Node.js dengan standar kompetensi industri yang divalidasi oleh AWS. Materi mencakup sintaksis JavaScript, function, struktur data (Object, Array, Map, Set), kondisional dan looping, ECMAScript Module, OOP, Functional Programming, Asynchronous Process (callback, Promise, async-await), dan Code Quality. Di akhir kelas, siswa menguasai dasar JavaScript untuk pengembangan aplikasi web.',
+    description: 'Course for individuals aiming to become Web Developers/Back-end developers using Node.js with industry-standard competencies validated by AWS. The material covers JavaScript syntax, functions, data structures (Object, Array, Map, Set), conditionals and loops, ECMAScript Modules, OOP, Functional Programming, Asynchronous Processes (callback, Promise, async-await), and Code Quality. By the end of the course, students master JavaScript fundamentals for web application development.',
     image: '/sertifikasi/belajar_js.webp',
     credentialUrl: 'https://www.dicoding.com/certificates',
     skills: ['JavaScript', 'Node.js', 'OOP', 'Functional Programming', 'Async/Await', 'ES Modules']
   },
-   {
+  {
     id: 'belajar-membuat-frontend-web-pemula',
-    title: 'Belajar Membuat Front-End Web untuk Pemula',
+    title: 'Building Front-End Web for Beginners',
     issuer: 'Dicoding Indonesia',
     year: '2025',
     shortId: 'DCOD-FE-005',
-    description: 'Kelas untuk Front-End Web Developer yang ingin mengembangkan website dengan fungsionalitas lebih dari sekadar media informasi. Materi mencakup Browser Object Model (BOM), Document Object Model (DOM), manipulasi DOM dengan JavaScript, penerapan event untuk interaktifitas, dan penyimpanan data menggunakan Web Storage. Di akhir kelas, siswa dapat membuat aplikasi front-end web yang interaktif dengan fitur penyimpanan.',
+    description: 'Course for Front-End Web Developers who want to build websites with functionality beyond just information media. The material covers Browser Object Model (BOM), Document Object Model (DOM), DOM manipulation with JavaScript, event implementation for interactivity, and data storage using Web Storage. By the end of the course, students can create interactive front-end web applications with storage features.',
     image: '/sertifikasi/belajar_frontend.webp',
     credentialUrl: 'https://www.dicoding.com/certificates',
     skills: ['JavaScript', 'DOM Manipulation', 'Event Handling', 'Web Storage', 'Interactive Web']
   },
   {
     id: 'belajar-dasar-pemrograman-web',
-    title: 'Belajar Dasar Pemrograman Web',
+    title: 'Web Programming Fundamentals',
     issuer: 'Dicoding Indonesia',
     year: '2025',
     shortId: 'DCOD-WEB-006',
-    description: 'Kelas ini membahas tuntas dasar HTML dan CSS sebagai fondasi pembuatan website. Materi mencakup pengenalan HTML, pendalaman HTML dengan elemen semantik, pengenalan CSS, pendalaman CSS dengan styling lanjutan, dan layout responsif dengan Flexbox. Disusun dan diverifikasi oleh tim expert Dicoding dengan materi yang terstruktur dan komprehensif.',
+    description: 'This course thoroughly discusses the basics of HTML and CSS as the foundation for website creation. The material covers an introduction to HTML, in-depth HTML with semantic elements, introduction to CSS, advanced CSS styling, and responsive layouts with Flexbox. Compiled and verified by Dicoding expert team with structured and comprehensive material.',
     image: '/sertifikasi/balajar_pemrograman.webp',
     credentialUrl: 'https://www.dicoding.com/certificates',
     skills: ['HTML5', 'CSS3', 'Semantic HTML', 'Flexbox', 'Responsive Design', 'Media Query']

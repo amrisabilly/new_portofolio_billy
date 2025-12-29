@@ -61,12 +61,14 @@ export default function About() {
           {/* Right: Content */}
           <FadeIn direction="right" delay={200}>
             <div className="space-y-6">
-              <p className='text-lg md:text-xl leading-relaxed text-gray-300'>I'm a passionate <span className='font-semibold text-white'>software developer</span> bridging technology and business. I specialize in development and project management to deliver systems that create real value.</p>
-              
-              <p className='text-lg md:text-xl leading-relaxed text-gray-300'>With expertise in full-stack development, I build scalable applications through clean code. My business background enables me to craft technology as strategic solutions.</p>
-
               <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                I believe in continuous learning to deliver <span className="italic">innovative solutions</span> that make a difference.
+                I am an <span className="font-semibold text-white">Information Systems</span> student who not only studies programming but also gains a comprehensive understanding of business. Throughout my studies, I have explored website and application development as well as information security.
+              </p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-300">
+                Beyond the classroom, I am actively involved in web development communities and have participated in various projects outside of my academic curriculum. These experiences have broadened my perspective and enhanced my ability to integrate technical skills with business insights to create relevant and innovative digital solutions.
+              </p>
+              <p className="text-lg md:text-xl leading-relaxed text-gray-300">
+                I believe in continuous learning to deliver <span className="italic">innovative solutions</span> that make a real impact.
               </p>
 
               {/* Stats */}
@@ -86,8 +88,8 @@ export default function About() {
               >
                 {[
                   { value: '2+', label: 'Years Exp' },
-                  { value: '20+', label: 'Projects' },
-                  { value: '5+', label: 'Clients' },
+                  { value: '8+', label: 'Projects' },
+                  { value: '3+', label: 'Clients' },
                 ].map((stat, idx) => (
                   <motion.div
                     key={idx}
