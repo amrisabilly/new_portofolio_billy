@@ -91,8 +91,8 @@ export const projects: Project[] = [
     longDescription: 'Sebagai Fullstack Developer, saya membangun aplikasi Kopi Kelana menggunakan Flutter untuk frontend dan Laravel sebagai backend API. Aplikasi ini memungkinkan pelanggan memesan kopi secara online, memilih menu spesial "Janjian Kopi" untuk menentukan waktu ngopi bersama lintas zona waktu, serta fitur konversi harga otomatis jika pelanggan menggunakan mata uang asing ke Rupiah. Sistem akan merekomendasikan menu sesuai harga setelah konversi. Selain itu, terdapat fitur gamifikasi: pelanggan mengumpulkan poin dari transaksi yang dapat ditukar dengan voucher diskon. Backend Laravel mengelola data menu, transaksi, user, konversi mata uang, dan sistem gamifikasi.',
     technologies: ['Flutter', 'Dart', 'Laravel', 'REST API', 'MySQL'],
     category: 'Food & Beverage',
-    year: '2024',
-    duration: '5 bulan',
+    year: '2025',
+    duration: '2 bulan',
     role: 'Fullstack Developer',
     link: '#',
     repository: 'https://github.com/amrisabilly/aplikasi_coffee_shop.git',
@@ -129,7 +129,7 @@ export const projects: Project[] = [
     duration: '4 bulan',
     role: 'Frontend Developer',
     link: '#',
-    repository: undefined,
+    repository: 'https://github.com/web-himasisfo/project-web-himasisfo.git',
     liveDemo: undefined,
     mockups: [
       '/portofolio/hima/porto1.webp',
@@ -152,6 +152,76 @@ export const projects: Project[] = [
     ],
     challenges: 'Mengintegrasikan fitur Spotify, membangun sistem manajemen konten yang mudah digunakan, dan memastikan website tetap responsif serta mudah diakses oleh seluruh anggota.',
     solutions: 'Menggunakan Laravel Inertia untuk frontend yang interaktif, integrasi API Spotify, serta desain UI/UX yang ramah pengguna dan mobile-friendly.'
+  },
+  {
+    id: 'aplikasi-kriptografi',
+    title: 'Aplikasi Kriptografi - Enkripsi & Dekripsi',
+    description: 'Aplikasi mobile kriptografi dengan fitur enkripsi dan dekripsi menggunakan metode klasik dan modern, serta super enkripsi untuk keamanan berlapis.',
+    longDescription: 'Proyek tugas akhir mata kuliah Kriptografi yang saya kembangkan sebagai Mobile Developer menggunakan Flutter. Aplikasi ini merupakan aplikasi statis dengan database lokal yang menyediakan berbagai metode kriptografi untuk enkripsi dan dekripsi pesan. Terdapat dua kategori utama: kriptografi klasik (Caesar Cipher dan Playfair Cipher) dan kriptografi modern (Stream Cipher dan Block Cipher). Selain itu, aplikasi ini juga mendukung fitur super enkripsi yang menggabungkan beberapa metode untuk menghasilkan keamanan berlapis. Aplikasi ini dirancang untuk memahami konsep keamanan informasi dan implementasi algoritma kriptografi secara praktis.',
+    technologies: ['Flutter', 'Dart', 'SQLite', 'Local Storage'],
+    category: 'Security & Cryptography',
+    year: '2025',
+    duration: '1 bulan',
+    role: 'Mobile Developer',
+    link: '#',
+    repository: 'https://github.com/amrisabilly/aplikasi_kriptografi.git',
+    liveDemo: undefined,
+    mockups: [
+      '/portofolio/kripto1/porto1.webp',
+      '/portofolio/kripto1/porto2.webp',
+      '/portofolio/kripto1/porto3.webp',
+      '/portofolio/kripto1/porto4.webp',
+      '/portofolio/kripto1/porto5.webp'
+    ],
+    features: [
+      'Enkripsi dan dekripsi pesan menggunakan Caesar Cipher',
+      'Enkripsi dan dekripsi menggunakan Playfair Cipher',
+      'Implementasi Stream Cipher untuk kriptografi modern',
+      'Implementasi Block Cipher untuk kriptografi modern',
+      'Super Enkripsi: kombinasi beberapa metode untuk keamanan berlapis',
+      'Database lokal untuk menyimpan riwayat enkripsi/dekripsi',
+      'Interface yang intuitif dan mudah digunakan',
+      'Penjelasan cara kerja setiap algoritma',
+      'Visualisasi proses enkripsi dan dekripsi',
+      'Mode offline tanpa memerlukan koneksi internet'
+    ],
+    challenges: 'Mengimplementasikan berbagai algoritma kriptografi dengan benar dan efisien, membangun super enkripsi yang menggabungkan metode klasik dan modern, serta menyajikan interface yang mudah dipahami untuk konsep teknis.',
+    solutions: 'Melakukan riset mendalam tentang setiap algoritma kriptografi, implementasi dengan testing yang ketat untuk memastikan hasil enkripsi/dekripsi akurat, menggunakan database lokal SQLite untuk performa optimal, serta mendesain UI/UX yang memudahkan pemahaman konsep kriptografi.'
+  },
+  {
+    id: 'cryptoguard-messaging',
+    title: 'CryptoGuard - Secure Messaging App',
+    description: 'Aplikasi pengiriman pesan terenkripsi end-to-end dengan public key & private key, enkripsi file, dan steganografi gambar untuk keamanan maksimal.',
+    longDescription: 'Proyek tugas akhir mata kuliah Kriptografi yang saya kembangkan sebagai Mobile Developer menggunakan Flutter dengan nama CryptoGuard. Aplikasi ini merupakan sistem pengiriman pesan terenkripsi secara end-to-end menggunakan konsep public key dan private key untuk menjamin keamanan komunikasi. Setiap pengguna memiliki sepasang kunci (public dan private key) untuk enkripsi dan dekripsi pesan. Aplikasi ini tidak hanya mendukung enkripsi teks, tetapi juga enkripsi file dan implementasi steganografi untuk menyembunyikan pesan rahasia di dalam gambar. Sistem ini dirancang untuk memberikan keamanan komunikasi tingkat tinggi dengan implementasi kriptografi asimetris dan teknik penyembunyian informasi.',
+    technologies: ['Flutter', 'Dart', 'RSA', 'AES', 'Steganography', 'SQLite', 'Local Storage'],
+    category: 'Security & Cryptography',
+    year: '2025',
+    duration: '1 bulan',
+    role: 'Mobile Developer',
+    link: '#',
+    repository: 'https://github.com/amrisabilly/kripografi_steganografi.git',
+    liveDemo: undefined,
+    mockups: [
+      '/portofolio/kripto2/porto1.webp',
+      '/portofolio/kripto2/porto2.webp',
+      '/portofolio/kripto2/porto3.webp',
+      '/portofolio/kripto2/porto4.webp'
+    ],
+    features: [
+      'Enkripsi end-to-end dengan public key & private key (RSA)',
+      'Sistem key pair generation untuk setiap pengguna',
+      'Enkripsi dan dekripsi pesan teks secara real-time',
+      'Enkripsi file dengan berbagai format',
+      'Steganografi: menyembunyikan pesan rahasia di dalam gambar',
+      'Ekstraksi pesan tersembunyi dari gambar',
+      'Manajemen kunci kriptografi yang aman',
+      'Database lokal untuk menyimpan pesan terenkripsi',
+      'Interface chat yang aman dan intuitif',
+      'Verifikasi integritas pesan',
+      'Mode offline untuk keamanan maksimal'
+    ],
+    challenges: 'Mengimplementasikan kriptografi asimetris (RSA) untuk enkripsi end-to-end yang aman, mengelola public dan private key setiap pengguna, implementasi steganografi yang tidak merusak kualitas gambar, serta menjaga performa aplikasi saat enkripsi file besar.',
+    solutions: 'Menggunakan algoritma RSA untuk enkripsi asimetris dan AES untuk enkripsi simetris pada file besar, implementasi key management system yang aman dengan penyimpanan private key terenkripsi, algoritma LSB (Least Significant Bit) untuk steganografi, serta kompresi dan chunking untuk file besar. Database lokal SQLite untuk keamanan data offline.'
   },
 ];
 
