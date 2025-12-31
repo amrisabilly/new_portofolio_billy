@@ -257,11 +257,11 @@ export const projects: Project[] = [
   },
   {
     id: 'persewaan-konser',
-    title: 'Website Persewaan Konser',
-    description: 'Website persewaan konser dengan fitur admin dan user, memungkinkan booking secara online, dibangun menggunakan PHP native dan MySQL.',
-    longDescription: 'Saya mengembangkan website persewaan konser yang memiliki dua sisi utama: admin dan user. Pengguna dapat melihat jadwal konser, melakukan booking tiket secara online, dan mendapatkan konfirmasi otomatis. Admin dapat mengelola data konser, jadwal, tiket, serta memantau seluruh proses booking. Sistem ini dibangun menggunakan PHP native tanpa framework dan menggunakan MySQL sebagai basis data. Fitur utama meliputi autentikasi user dan admin, manajemen konser, booking tiket, notifikasi email, serta dashboard monitoring untuk admin.',
+    title: 'Website Persewaan Alat Konser',
+    description: 'Website persewaan alat-alat konser dengan fitur admin dan user, memungkinkan pemesanan alat secara online, dibangun menggunakan PHP native dan MySQL.',
+    longDescription: 'Saya mengembangkan website persewaan alat-alat konser yang memiliki dua sisi utama: admin dan user. Pengguna dapat melihat daftar alat konser yang tersedia, melakukan pemesanan alat secara online, dan mendapatkan konfirmasi otomatis. Admin dapat mengelola data alat, stok, jadwal peminjaman, serta memantau seluruh proses pemesanan. Sistem ini dibangun menggunakan PHP native tanpa framework dan menggunakan MySQL sebagai basis data. Fitur utama meliputi autentikasi user dan admin, manajemen alat konser, pemesanan alat, notifikasi email, serta dashboard monitoring untuk admin.',
     technologies: ['PHP Native', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
-    category: 'Event & Booking',
+    category: 'Event & Equipment Rental',
     year: '2024',
     duration: '3 bulan',
     role: 'Fullstack Developer',
@@ -274,15 +274,15 @@ export const projects: Project[] = [
       '/portofolio/sewa/porto3.webp'
     ],
     features: [
-      'Sisi user: lihat jadwal konser, booking tiket online',
-      'Sisi admin: kelola data konser, jadwal, tiket',
+      'Sisi user: lihat daftar alat konser, pemesanan alat online',
+      'Sisi admin: kelola data alat, stok, jadwal peminjaman',
       'Autentikasi user dan admin',
-      'Notifikasi email konfirmasi booking',
+      'Notifikasi email konfirmasi pemesanan',
       'Dashboard monitoring untuk admin',
-      'Riwayat booking dan manajemen tiket',
+      'Riwayat pemesanan dan manajemen alat',
       'Responsive design untuk berbagai perangkat'
     ],
-    challenges: 'Membangun sistem booking real-time tanpa framework, memastikan keamanan data user dan admin, serta mengelola notifikasi otomatis.',
+    challenges: 'Membangun sistem pemesanan alat real-time tanpa framework, memastikan keamanan data user dan admin, serta mengelola notifikasi otomatis.',
     solutions: 'Menggunakan query SQL yang efisien, validasi input secara ketat, serta implementasi sistem notifikasi email otomatis dan dashboard monitoring.'
   },
 ];
