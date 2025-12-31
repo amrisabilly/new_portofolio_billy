@@ -223,6 +223,68 @@ export const projects: Project[] = [
     challenges: 'Implementing asymmetric cryptography (RSA) for secure end-to-end encryption, managing each user’s public and private key, implementing steganography without degrading image quality, and maintaining app performance when encrypting large files.',
     solutions: 'Using RSA algorithm for asymmetric encryption and AES for symmetric encryption on large files, implementing a secure key management system with encrypted private key storage, LSB (Least Significant Bit) algorithm for steganography, as well as compression and chunking for large files. Local SQLite database for offline data security.'
   },
+  {
+    id: 'pandawara-bersih-lingkungan',
+    title: 'Pandawara - Website Bersih-Bersih Lingkungan',
+    description: 'Website bertema bersih-bersih lingkungan (Pandawara) dengan fitur pelaporan, dokumentasi kegiatan, dashboard admin, dan sisi user, dibangun menggunakan PHP native dan MySQL.',
+    longDescription: 'Saya mengembangkan website Pandawara yang berfokus pada kegiatan bersih-bersih lingkungan. Website ini memiliki dua sisi utama: user dan admin. Pengguna dapat melaporkan lokasi yang membutuhkan aksi bersih-bersih, mendokumentasikan kegiatan, serta melihat galeri dokumentasi aksi. Admin dapat memantau, memverifikasi, dan mengelola laporan serta dokumentasi yang masuk, serta mengelola data kegiatan dan relawan. Sistem dibangun menggunakan PHP native tanpa framework dan MySQL sebagai basis data. Fitur utama meliputi pelaporan lokasi, upload dokumentasi (foto/video), dashboard monitoring untuk admin, autentikasi user dan admin, serta notifikasi status laporan.',
+    technologies: ['PHP Native', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    category: 'Environment & Community',
+    year: '2024',
+    duration: '2 bulan',
+    role: 'Fullstack Developer',
+    link: '#',
+    repository: 'https://github.com/amrisabilly/project-pandawara.git',
+    liveDemo: undefined,
+    mockups: [
+      '/portofolio/pandawara/porto1.webp',
+      '/portofolio/pandawara/porto2.webp',
+      '/portofolio/pandawara/porto3.webp',
+      '/portofolio/pandawara/porto4.webp'
+    ],
+    features: [
+      'Sisi user: pelaporan lokasi, upload dokumentasi kegiatan',
+      'Sisi admin: verifikasi dan manajemen laporan/dokumentasi',
+      'Dashboard monitoring untuk admin',
+      'Galeri dokumentasi aksi bersih-bersih',
+      'Autentikasi user dan admin',
+      'Notifikasi status laporan',
+      'Manajemen data kegiatan dan relawan',
+      'Responsive design untuk berbagai perangkat'
+    ],
+    challenges: 'Membangun sistem pelaporan dan dokumentasi yang mudah digunakan, mengelola verifikasi data, serta memastikan keamanan dan kecepatan akses data.',
+    solutions: 'Menggunakan query SQL yang efisien, validasi input dan file upload, serta dashboard monitoring untuk admin dan sistem notifikasi otomatis.'
+  },
+  {
+    id: 'persewaan-konser',
+    title: 'Website Persewaan Konser',
+    description: 'Website persewaan konser dengan fitur admin dan user, memungkinkan booking secara online, dibangun menggunakan PHP native dan MySQL.',
+    longDescription: 'Saya mengembangkan website persewaan konser yang memiliki dua sisi utama: admin dan user. Pengguna dapat melihat jadwal konser, melakukan booking tiket secara online, dan mendapatkan konfirmasi otomatis. Admin dapat mengelola data konser, jadwal, tiket, serta memantau seluruh proses booking. Sistem ini dibangun menggunakan PHP native tanpa framework dan menggunakan MySQL sebagai basis data. Fitur utama meliputi autentikasi user dan admin, manajemen konser, booking tiket, notifikasi email, serta dashboard monitoring untuk admin.',
+    technologies: ['PHP Native', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    category: 'Event & Booking',
+    year: '2024',
+    duration: '3 bulan',
+    role: 'Fullstack Developer',
+    link: '#',
+    repository: 'https://github.com/amrisabilly/Website-Aku_sewa.git',
+    liveDemo: undefined,
+    mockups: [
+      '/portofolio/sewa/porto1.webp',
+      '/portofolio/sewa/porto2.webp',
+      '/portofolio/sewa/porto3.webp'
+    ],
+    features: [
+      'Sisi user: lihat jadwal konser, booking tiket online',
+      'Sisi admin: kelola data konser, jadwal, tiket',
+      'Autentikasi user dan admin',
+      'Notifikasi email konfirmasi booking',
+      'Dashboard monitoring untuk admin',
+      'Riwayat booking dan manajemen tiket',
+      'Responsive design untuk berbagai perangkat'
+    ],
+    challenges: 'Membangun sistem booking real-time tanpa framework, memastikan keamanan data user dan admin, serta mengelola notifikasi otomatis.',
+    solutions: 'Menggunakan query SQL yang efisien, validasi input secara ketat, serta implementasi sistem notifikasi email otomatis dan dashboard monitoring.'
+  },
 ];
 
 export function getProjectById(id: string): Project | undefined {

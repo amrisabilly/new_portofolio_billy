@@ -9,6 +9,8 @@ import FadeIn from '../ui/FadeIn';
 import { projects } from '@/app/data/projects';
 
 export default function Projects() {
+  const [showAll, setShowAll] = React.useState(false);
+  const displayedProjects = showAll ? projects : projects.slice(0, 4);
   return (
     <section id="projects" className="relative bg-gray-50 py-20 md:py-32">
       <Container>
@@ -38,7 +40,7 @@ export default function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
+          {displayedProjects.map((project, idx) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 50 }}
@@ -112,6 +114,28 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
+
+        {/* View All Button */}
+        {!showAll && projects.length > 4 && (
+          <div className="flex justify-center mt-10">
+            <button
+              className="px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition"
+              onClick={() => setShowAll(true)}
+            >
+              View All Projects
+            </button>
+          </div>
+        )}
+        {showAll && (
+          <div className="flex justify-center mt-10">
+            <button
+              className="px-6 py-3 bg-gray-200 text-black rounded-lg font-semibold hover:bg-gray-300 transition"
+              onClick={() => setShowAll(false)}
+            >
+              Show Less
+            </button>
+          </div>
+        )}
       </Container>
     </section>
   );
