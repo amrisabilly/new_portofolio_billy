@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import FadeIn from '../ui/FadeIn';
+import { useTranslations } from 'next-intl';
 
 const skillCategories = [
   {
@@ -34,6 +35,7 @@ const skillCategories = [
 ];
 
 export default function Skills() {
+  const t = useTranslations('skills');
   return (
     <section id="skills" className="relative bg-white py-20 md:py-32 overflow-hidden">
       {/* Background decorative elements */}
@@ -50,8 +52,8 @@ export default function Skills() {
         <FadeIn>
           <div className="mb-16 md:mb-24">
             <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-              Skills &
-              <span className="block italic font-light">Expertise</span>
+              {t('title')}
+              <span className="block italic font-light">{t('titleAccent')}</span>
             </h2>
             <motion.div
               className="mt-6 h-1 bg-black"

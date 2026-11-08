@@ -1,0 +1,136 @@
+{
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "indonesian": "Indonesian",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch",
+    "viewDetails": "View Details",
+    "viewAllProjects": "View All Projects",
+    "showLess": "Show Less",
+    "viewAllCredentials": "View All Credentials",
+    "issued": "Issued:",
+    "backToTop": "Back to Top"
+  },
+  "hero": {
+    "role": "Software Developer",
+    "tagline": "Crafting elegant solutions through clean code and innovative design.",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About",
+    "titleAccent": "Me",
+    "paragraph1": "I am an Information Systems student who not only studies programming but also gains a comprehensive understanding of business. Throughout my studies, I have explored website and application development as well as information security.",
+    "paragraph2": "Beyond the classroom, I am actively involved in web development communities and have participated in various projects outside of my academic curriculum. These experiences have broadened my perspective and enhanced my ability to integrate technical skills with business insights to create relevant and innovative digital solutions.",
+    "paragraph3": "I believe in continuous learning to deliver innovative solutions that make a real impact.",
+    "yearsExp": "Years Exp",
+    "projects": "Projects",
+    "clients": "Clients"
+  },
+  "skills": {
+    "title": "Skills &",
+    "titleAccent": "Expertise"
+  },
+  "projects": {
+    "title": "Featured",
+    "titleAccent": "Projects",
+    "description": "A selection of my recent work showcasing various technologies and problem-solving approaches."
+  },
+  "certificates": {
+    "title": "Certifications &",
+    "titleAccent": "Credentials"
+  },
+  "experience": {
+    "title": "Experience &",
+    "titleAccent": "Education",
+    "work": "Work Experience",
+    "education": "Education",
+    "jobs": {
+      "naga": {
+        "role": "Fullstack Developer",
+        "company": "Naga Cargo",
+        "period": "2025 - Present",
+        "description": "Developing end-to-end solutions for cargo management system, handling both web and mobile application development.",
+        "achievement1": "Built cargo management website",
+        "achievement2": "Developed mobile application",
+        "achievement3": "Implemented full-stack solutions"
+      },
+      "berbinar": {
+        "role": "Backend Developer",
+        "company": "PT Berbinar Insightfull",
+        "period": "2024 - Present",
+        "description": "Developing and maintaining backend systems for various web applications including psychological testing, e-learning, and internal staff management platforms.",
+        "achievement1": "Built psychological testing website",
+        "achievement2": "Developed e-learning platform",
+        "achievement3": "Created internal staff management website"
+      },
+      "community": {
+        "role": "Vice Chairman of the Website Community",
+        "company": "Himasisfo UPNYK",
+        "period": "2023 - 2024",
+        "description": "Led website community initiatives and coordinated team efforts to build and maintain organizational web presence.",
+        "achievement1": "Built KSM Himasisfo website",
+        "achievement2": "Coordinated website development team",
+        "achievement3": "Managed website community activities"
+      },
+      "frontend": {
+        "role": "Frontend Developer",
+        "company": "Himasisfo UPNYK",
+        "period": "2023 - 2024",
+        "description": "Built responsive and accessible web interfaces. Collaborated with designers to transform mockups into pixel-perfect implementations.",
+        "achievement1": "Built responsive and interactive websites",
+        "achievement2": "Optimized performance and accessibility",
+        "achievement3": "Developed reusable UI components"
+      }
+    },
+    "educationItems": {
+      "bachelor": {
+        "degree": "Bachelor of Information Systems",
+        "institution": "UPN Veteran Yogyakarta",
+        "period": "2023 - now",
+        "details": "Graduated with Honors. Focus on Information Systems, Business Analysis, and Application Development."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's",
+    "titleAccent": "Create",
+    "titleEnd": "Together",
+    "description": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.",
+    "emailMe": "Email Me",
+    "sendMessage": "Send Message",
+    "connect": "Connect With Me",
+    "available": "Available for freelance projects"
+  },
+  "detail": {
+    "backToProjects": "Back to Projects",
+    "backToCertificates": "Back to Certificates",
+    "liveDemo": "View Live Demo",
+    "repository": "View Repository",
+    "viewMoreProjects": "View More Projects",
+    "backToAllProjects": "Back to All Projects",
+    "technologies": "Technologies",
+    "links": "Links",
+    "liveDemoShort": "Live Demo",
+    "repositoryShort": "Repository",
+    "overview": "Overview",
+    "mockups": "Project Mockups",
+    "features": "Key Features",
+    "challenges": "Challenges & Solutions",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "projectInfo": "Project Info",
+    "duration": "Duration",
+    "role": "Role",
+    "year": "Year",
+    "category": "Category",
+    "verify": "Verify Certificate",
+    "about": "About",
+    "skillsCovered": "Skills Covered",
+    "certificateDetails": "Certificate Details",
+    "certificateId": "Certificate ID",
+    "issuedBy": "Issued By",
+    "yearObtained": "Year Obtained",
+    "notFound": "Certificate not found"
+  }
+}

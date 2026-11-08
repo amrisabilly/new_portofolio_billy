@@ -10,6 +10,8 @@ export interface Certificate {
   skills: string[];
 }
 
+type CertificateCopy = Pick<Certificate, 'title' | 'issuer' | 'description' | 'skills'>;
+
 export const certificates: Certificate[] = [
   {
     id: 'fundamental-project-management-fga-2025',
@@ -111,6 +113,69 @@ export const certificates: Certificate[] = [
     skills: ['HTML5', 'CSS3', 'Semantic HTML', 'Flexbox', 'Responsive Design', 'Media Query']
   }
 ];
+
+export const certificateTranslations: Record<string, { id: CertificateCopy }> = {
+  'fundamental-project-management-fga-2025': { id: {
+    title: 'Manajemen Proyek Fundamental',
+    issuer: 'Fresh Graduate Academy - Digital Talent Scholarship',
+    description: 'Sertifikat pelatihan yang diberikan setelah menyelesaikan pelatihan Manajemen Proyek Fundamental dalam program Fresh Graduate Academy Digital Talent Scholarship 2025. Pelatihan ini membahas konsep dan praktik penting manajemen proyek untuk pengembangan talenta digital.',
+    skills: ['Manajemen Proyek', 'Talenta Digital', 'Keterampilan Fundamental', 'Pelatihan', 'Fresh Graduate Academy']
+  }},
+  'alibaba-cloud-certified-developer': { id: {
+    title: 'Developer Tersertifikasi Alibaba Cloud',
+    issuer: 'Alibaba Cloud',
+    description: 'Sertifikasi Alibaba Cloud untuk pengembangan aplikasi menggunakan layanan Alibaba Cloud. Sertifikasi ini memvalidasi keahlian dalam cloud computing, pengembangan aplikasi, dan deployment untuk membangun solusi cloud yang skalabel dan efisien.',
+    skills: ['Alibaba Cloud', 'Cloud Computing', 'Pengembangan Aplikasi', 'Layanan Cloud', 'Deployment Cloud', 'Solusi Skalabel']
+  }},
+  'employee-of-the-month-berbinar': { id: {
+    title: 'Karyawan Terbaik Bulan Ini',
+    issuer: 'PT Berbinar Insightful Indonesia',
+    description: 'Sertifikat penghargaan atas kontribusi dan kinerja luar biasa sebagai Staf Web dan Mobile Apps Developer di PT Berbinar Insightful Indonesia. Penghargaan ini mengakui dedikasi, keunggulan teknis, dan dampak dalam pengembangan aplikasi web serta mobile.',
+    skills: ['Pengembangan Web', 'Pengembangan Aplikasi Mobile', 'Kinerja Unggul', 'Kontribusi Tim', 'Keunggulan Teknis', 'Pencapaian Profesional']
+  }},
+  'wakil-ketua-staf-frontend-developer': { id: {
+    title: 'Wakil Ketua dan Staf Front-end Developer',
+    issuer: 'HIMASISFO UPN Veteran Yogyakarta',
+    description: 'Sertifikat apresiasi atas kontribusi dan dedikasi tinggi dalam proses pengembangan serta pengelolaan website HIMASISFO. Kontribusi tersebut berdampak pada peningkatan kualitas, fungsionalitas, dan kemudahan penggunaan platform.',
+    skills: ['Pengembangan Frontend', 'Pengembangan Web', 'Kepemimpinan Tim', 'Manajemen Website', 'Implementasi UI/UX', 'Koordinasi Proyek']
+  }},
+  'belajar-dasar-ai': { id: {
+    title: 'Dasar-Dasar AI',
+    issuer: 'Dicoding Indonesia',
+    description: 'Kursus tingkat pemula yang membahas konsep dasar Artificial Intelligence, data dan pemanfaatannya, pengantar Machine Learning, serta konsep dan implementasi Deep Learning. Peserta dapat menganalisis konsep AI fundamental dan penerapannya.',
+    skills: ['Kecerdasan Buatan', 'Machine Learning', 'Deep Learning', 'Data Science', 'Konsep AI', 'Dasar ML']
+  }},
+  'belajar-membuat-aplikasi-web-react': { id: {
+    title: 'Membangun Aplikasi Web dengan React',
+    issuer: 'Dicoding Indonesia',
+    description: 'Kursus untuk Front-End Web Developer yang membahas React dan ekosistemnya, composition, kode deklaratif, alur data satu arah, komponen UI, props, state, dan controlled component untuk membangun aplikasi web.',
+    skills: ['React.js', 'Komponen', 'Props', 'State', 'Controlled Component', 'Functional Component']
+  }},
+  'belajar-dasar-pemrograman-javascript': { id: {
+    title: 'Dasar-Dasar Pemrograman JavaScript',
+    issuer: 'Dicoding Indonesia',
+    description: 'Kursus yang membahas sintaks JavaScript, fungsi, struktur data, kondisi dan perulangan, ES Modules, OOP, Functional Programming, proses asynchronous, serta kualitas kode untuk pengembangan aplikasi web.',
+    skills: ['JavaScript', 'Node.js', 'OOP', 'Functional Programming', 'Async/Await', 'ES Modules']
+  }},
+  'belajar-membuat-frontend-web-pemula': { id: {
+    title: 'Membangun Front-End Web untuk Pemula',
+    issuer: 'Dicoding Indonesia',
+    description: 'Kursus yang membahas BOM, DOM, manipulasi DOM dengan JavaScript, event untuk interaktivitas, dan penyimpanan data menggunakan Web Storage untuk membangun aplikasi frontend interaktif.',
+    skills: ['JavaScript', 'Manipulasi DOM', 'Event Handling', 'Web Storage', 'Web Interaktif']
+  }},
+  'belajar-dasar-pemrograman-web': { id: {
+    title: 'Dasar-Dasar Pemrograman Web',
+    issuer: 'Dicoding Indonesia',
+    description: 'Kursus yang membahas dasar HTML dan CSS sebagai fondasi pembuatan website, elemen HTML semantik, styling CSS lanjutan, serta layout responsif dengan Flexbox.',
+    skills: ['HTML5', 'CSS3', 'HTML Semantik', 'Flexbox', 'Desain Responsif', 'Media Query']
+  }}
+};
+
+export function getLocalizedCertificate(certificate: Certificate, locale: string): Certificate {
+  if (locale !== 'id') return certificate;
+  const translation = certificateTranslations[certificate.id]?.id;
+  return translation ? { ...certificate, ...translation } : certificate;
+}
 
 export function getCertificateById(id: string): Certificate | undefined {
   return certificates.find(cert => cert.id === id);

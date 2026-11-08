@@ -4,8 +4,10 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Container from '../ui/Container';
 import FadeIn from '../ui/FadeIn';
+import { useTranslations } from 'next-intl';
 
 export default function About() {
+  const t = useTranslations('about');
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
@@ -28,8 +30,8 @@ export default function About() {
             <div className="space-y-8">
               <div className="relative">
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  About
-                  <span className="block italic font-light">Me</span>
+                  {t('title')}
+                  <span className="block italic font-light">{t('titleAccent')}</span>
                 </h2>
                 {/* Decorative line */}
                 <motion.div
@@ -62,13 +64,13 @@ export default function About() {
           <FadeIn direction="right" delay={200}>
             <div className="space-y-6">
               <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                I am an <span className="font-semibold text-white">Information Systems</span> student who not only studies programming but also gains a comprehensive understanding of business. Throughout my studies, I have explored website and application development as well as information security.
+                {t('paragraph1')}
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                Beyond the classroom, I am actively involved in web development communities and have participated in various projects outside of my academic curriculum. These experiences have broadened my perspective and enhanced my ability to integrate technical skills with business insights to create relevant and innovative digital solutions.
+                {t('paragraph2')}
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-gray-300">
-                I believe in continuous learning to deliver <span className="italic">innovative solutions</span> that make a real impact.
+                {t('paragraph3')}
               </p>
 
               {/* Stats */}
@@ -87,9 +89,9 @@ export default function About() {
                 }}
               >
                 {[
-                  { value: '2+', label: 'Years Exp' },
-                  { value: '8+', label: 'Projects' },
-                  { value: '3+', label: 'Clients' },
+                  { value: '2+', label: t('yearsExp') },
+                  { value: '8+', label: t('projects') },
+                  { value: '3+', label: t('clients') },
                 ].map((stat, idx) => (
                   <motion.div
                     key={idx}

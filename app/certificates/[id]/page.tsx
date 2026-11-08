@@ -1,6 +1,7 @@
-import { getAllCertificateIds, getCertificateById } from '@/app/data/certificates';
+import { getAllCertificateIds, getCertificateById, getLocalizedCertificate } from '@/app/data/certificates';
 import CertificateDetailClient from '@/app/components/sections/CertificateDetailClient';
 import { notFound } from 'next/navigation';
+import { getLocale } from 'next-intl/server';
 
 export function generateStaticParams() {
   const certificateIds = getAllCertificateIds();
@@ -12,8 +13,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const certificate = getCertificateById(id);
+  const locale = await getLocale();
+  const localizedCertificate = certificate ? getLocalizedCertificate(certificate, locale) : undefined;
   
-  if (!certificate) {
+  if (!localizedCertificate) {
     return {
       title: 'Certificate Not Found - Amri Sabilly Portfolio',
       description: 'Certificate not found',
@@ -21,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
-    title: `${certificate.title} - Amri Sabilly Portfolio`,
-    description: certificate.description,
+    title: `${localizedCertificate.title} - Amri Sabilly Portfolio`,
+    description: localizedCertificate.description,
   };
 }
 

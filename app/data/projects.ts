@@ -17,6 +17,11 @@ export interface Project {
   solutions?: string;
 }
 
+type ProjectCopy = Pick<
+  Project,
+  'title' | 'description' | 'longDescription' | 'category' | 'duration' | 'role' | 'features' | 'challenges' | 'solutions'
+>;
+
 export const projects: Project[] = [
   {
     id: 'naga-cargo-indonesia',
@@ -286,6 +291,186 @@ export const projects: Project[] = [
     solutions: 'Menggunakan query SQL yang efisien, validasi input secara ketat, serta implementasi sistem notifikasi email otomatis dan dashboard monitoring.'
   },
 ];
+
+export const projectTranslations: Record<string, { id: ProjectCopy }> = {
+  'naga-cargo-indonesia': {
+    id: {
+      title: 'Sistem Pengiriman Naga Cargo Indonesia',
+      description: 'Aplikasi mobile dan dashboard web untuk memantau pengiriman serta bukti foto kurir di seluruh Indonesia untuk Naga Cargo Indonesia (JNE Cargo).',
+      longDescription: 'Proyek pihak ketiga bersama Naga Cargo Indonesia (JNE Cargo) sebagai Fullstack Developer. Saya mengembangkan aplikasi mobile (Flutter/Dart) yang digunakan kurir untuk mengunggah bukti foto pengiriman sesuai wilayah tugas. Aplikasi hanya dapat diakses di area tertentu, mendukung kompresi gambar, dan dapat digunakan secara offline. Saya juga membuat dashboard website (Laravel) untuk memantau aktivitas kurir dan data PIC. Sistem menggunakan API untuk mengintegrasikan aplikasi dan website sehingga proses pengiriman dan pemantauan berjalan efisien serta real-time.',
+      category: 'Logistik & Pengiriman',
+      duration: '6 bulan',
+      role: 'Fullstack Developer',
+      features: [
+        'Aplikasi mobile untuk mengunggah bukti foto pengiriman',
+        'Dashboard web untuk memantau aktivitas kurir dan data PIC',
+        'Integrasi API antara aplikasi dan website',
+        'Pelacakan pengiriman secara real-time',
+        'Manajemen wilayah kurir',
+        'Kompresi gambar otomatis',
+        'Dukungan mode offline',
+        'Notifikasi status pengiriman',
+        'Laporan dan rekap data pengiriman'
+      ],
+      challenges: 'Mengelola unggahan foto dari banyak kurir di berbagai wilayah secara real-time, membatasi area akses aplikasi, mengoptimalkan kompresi gambar, dan menyinkronkan data saat offline.',
+      solutions: 'Menerapkan REST API terpusat, autentikasi aman, validasi lokasi wilayah, kompresi gambar di aplikasi, dan sinkronisasi otomatis saat jaringan tersedia.'
+    }
+  },
+  'berbinar-insightful-indonesia': {
+    id: {
+      title: 'Berbinar Insightful Indonesia',
+      description: 'Website utama dan ekosistem digital untuk perusahaan psikologi Berbinar Insightful Indonesia yang mencakup pemasaran, data staf, e-learning, dan layanan psikolog.',
+      longDescription: 'Saya berperan sebagai Backend Developer dalam pengembangan ekosistem digital Berbinar Insightful Indonesia. Proyek ini mencakup website bisnis utama untuk pemasaran, website staf untuk pengelolaan data karyawan, BerbinarPlus untuk e-learning, dan website layanan psikolog. Backend dikembangkan menggunakan Laravel dengan CI/CD GitHub Workflow, deployment melalui Termius, dan layanan hosting.',
+      category: 'Psikologi & Bisnis',
+      duration: '6 bulan',
+      role: 'Backend Developer',
+      features: [
+        'Website utama untuk pemasaran perusahaan psikologi',
+        'Website staf untuk pengelolaan data karyawan',
+        'BerbinarPlus untuk e-learning',
+        'Website layanan psikolog',
+        'Integrasi multi-platform',
+        'CI/CD dengan GitHub Workflow',
+        'Deployment otomatis melalui Termius',
+        'Manajemen pengguna dan autentikasi',
+        'Dashboard admin',
+        'Layanan hosting'
+      ],
+      challenges: 'Membangun ekosistem digital terintegrasi untuk kebutuhan bisnis, staf, e-learning, dan layanan psikolog dengan keamanan serta efisiensi tinggi.',
+      solutions: 'Menggunakan Laravel untuk backend modular, CI/CD GitHub Workflow untuk deployment otomatis, serta Termius dan layanan hosting untuk pengelolaan server yang efisien dan aman.'
+    }
+  },
+  'kopi-kelana': {
+    id: {
+      title: 'Kopi Kelana - Aplikasi Kedai Kopi',
+      description: 'Aplikasi kedai kopi dengan pemesanan kopi, Coffee Meetup lintas zona waktu, konversi mata uang, rekomendasi menu, dan gamifikasi poin untuk voucher diskon.',
+      longDescription: 'Sebagai Fullstack Developer, saya membangun aplikasi Kopi Kelana menggunakan Flutter untuk frontend dan Laravel sebagai backend API. Pelanggan dapat memesan kopi secara online, memilih menu Coffee Meetup untuk menjadwalkan sesi lintas zona waktu, serta mendapatkan konversi harga otomatis dari mata uang asing ke Rupiah. Sistem merekomendasikan menu berdasarkan harga yang telah dikonversi dan menyediakan fitur gamifikasi berupa poin transaksi yang dapat ditukar dengan voucher diskon.',
+      category: 'Makanan & Minuman',
+      duration: '2 bulan',
+      role: 'Fullstack Developer',
+      features: [
+        'Pemesanan kopi online melalui aplikasi',
+        'Menu Coffee Meetup untuk penjadwalan lintas zona waktu',
+        'Konversi mata uang asing ke Rupiah secara otomatis',
+        'Rekomendasi menu berdasarkan harga yang dikonversi',
+        'Gamifikasi: mengumpulkan poin dari transaksi',
+        'Penukaran poin dengan voucher diskon',
+        'Manajemen menu, transaksi, dan pengguna',
+        'Integrasi API antara aplikasi dan backend',
+        'Notifikasi status pesanan',
+        'Dashboard admin untuk pemantauan data'
+      ],
+      challenges: 'Membangun konversi harga real-time, fitur meetup lintas zona waktu, dan gamifikasi yang terintegrasi dengan transaksi tanpa mengurangi performa aplikasi.',
+      solutions: 'Menggunakan API nilai tukar untuk konversi real-time, logika penjadwalan lintas zona waktu, serta sistem gamifikasi terintegrasi pada backend.'
+    }
+  },
+  'hima-sistem-informasi': {
+    id: {
+      title: 'Website Himpunan Mahasiswa Sistem Informasi',
+      description: 'Website komunitas Himpunan Mahasiswa Sistem Informasi dengan integrasi Spotify, panduan mahasiswa, halaman penjualan merchandise, dan fitur lainnya.',
+      longDescription: 'Sebagai Frontend Developer, saya mengembangkan website komunitas Himpunan Mahasiswa Sistem Informasi menggunakan Laravel Inertia. Website ini menyediakan integrasi Spotify untuk playlist komunitas, panduan mahasiswa baru, halaman penjualan merchandise, serta informasi kegiatan dan layanan himpunan. Frontend dibuat dengan Inertia.js dan backend menggunakan MySQL.',
+      category: 'Komunitas & Pendidikan',
+      duration: '4 bulan',
+      role: 'Frontend Developer',
+      features: [
+        'Integrasi playlist Spotify untuk komunitas',
+        'Panduan mahasiswa baru',
+        'Halaman penjualan merchandise',
+        'Informasi kegiatan dan acara himpunan',
+        'Manajemen konten dinamis',
+        'Dashboard admin untuk pengelolaan data',
+        'Autentikasi anggota',
+        'Desain responsif dan modern'
+      ],
+      challenges: 'Mengintegrasikan fitur Spotify, membangun sistem pengelolaan konten yang mudah digunakan, serta menjaga website tetap responsif dan mudah diakses.',
+      solutions: 'Menggunakan Laravel Inertia untuk frontend interaktif, integrasi Spotify API, serta desain UI/UX yang ramah pengguna dan perangkat mobile.'
+    }
+  },
+  'aplikasi-kriptografi': {
+    id: {
+      title: 'Aplikasi Kriptografi - Enkripsi & Dekripsi',
+      description: 'Aplikasi kriptografi mobile dengan fitur enkripsi dan dekripsi menggunakan metode klasik dan modern, serta super enkripsi untuk keamanan berlapis.',
+      longDescription: 'Proyek akhir mata kuliah Kriptografi yang saya kembangkan sebagai Mobile Developer menggunakan Flutter. Aplikasi statis ini memiliki database lokal dan menyediakan berbagai metode kriptografi untuk enkripsi serta dekripsi pesan, yaitu Caesar Cipher, Playfair Cipher, Stream Cipher, dan Block Cipher. Aplikasi juga mendukung super enkripsi yang menggabungkan beberapa metode untuk keamanan berlapis.',
+      category: 'Keamanan & Kriptografi',
+      duration: '1 bulan',
+      role: 'Mobile Developer',
+      features: [
+        'Enkripsi dan dekripsi pesan dengan Caesar Cipher',
+        'Enkripsi dan dekripsi dengan Playfair Cipher',
+        'Implementasi Stream Cipher',
+        'Implementasi Block Cipher',
+        'Super Enkripsi dengan beberapa metode',
+        'Database lokal untuk riwayat enkripsi dan dekripsi',
+        'Antarmuka intuitif dan mudah digunakan',
+        'Penjelasan cara kerja setiap algoritma',
+        'Visualisasi proses enkripsi dan dekripsi',
+        'Mode offline tanpa koneksi internet'
+      ],
+      challenges: 'Mengimplementasikan berbagai algoritma kriptografi secara benar dan efisien, membangun super enkripsi, serta menyediakan antarmuka yang mudah dipahami.',
+      solutions: 'Melakukan riset mendalam, pengujian ketat, menggunakan database SQLite lokal, dan merancang UI/UX yang membantu pemahaman konsep kriptografi.'
+    }
+  },
+  'cryptoguard-messaging': {
+    id: {
+      title: 'CryptoGuard - Aplikasi Pesan Aman',
+      description: 'Aplikasi pesan terenkripsi end-to-end dengan kunci publik dan privat, enkripsi file, serta steganografi gambar untuk keamanan maksimal.',
+      longDescription: 'Proyek akhir mata kuliah Kriptografi yang saya kembangkan sebagai Mobile Developer menggunakan Flutter. CryptoGuard adalah sistem pesan terenkripsi end-to-end yang menggunakan konsep kunci publik dan privat. Setiap pengguna memiliki pasangan kunci untuk mengenkripsi dan mendekripsi pesan. Aplikasi mendukung enkripsi teks, enkripsi file, dan steganografi untuk menyembunyikan pesan rahasia di dalam gambar.',
+      category: 'Keamanan & Kriptografi',
+      duration: '1 bulan',
+      role: 'Mobile Developer',
+      features: [
+        'Enkripsi end-to-end dengan kunci publik dan privat (RSA)',
+        'Pembuatan pasangan kunci untuk setiap pengguna',
+        'Enkripsi dan dekripsi pesan teks real-time',
+        'Enkripsi file berbagai format',
+        'Steganografi untuk menyembunyikan pesan dalam gambar',
+        'Ekstraksi pesan tersembunyi dari gambar',
+        'Manajemen kunci kriptografi yang aman',
+        'Database lokal untuk menyimpan pesan terenkripsi',
+        'Antarmuka chat yang aman dan intuitif',
+        'Verifikasi integritas pesan',
+        'Mode offline untuk keamanan maksimal'
+      ],
+      challenges: 'Mengimplementasikan kriptografi asimetris RSA, mengelola kunci publik dan privat, menerapkan steganografi tanpa menurunkan kualitas gambar, serta menjaga performa saat mengenkripsi file besar.',
+      solutions: 'Menggunakan RSA untuk enkripsi asimetris, AES untuk file besar, penyimpanan kunci privat terenkripsi, algoritma LSB untuk steganografi, serta kompresi dan pemotongan file.'
+    }
+  },
+  'pandawara-bersih-lingkungan': {
+    id: {
+      title: 'Pandawara - Website Bersih-Bersih Lingkungan',
+      description: 'Website bertema bersih-bersih lingkungan dengan fitur pelaporan, dokumentasi kegiatan, dashboard admin, dan sisi pengguna.',
+      longDescription: 'Saya mengembangkan website Pandawara yang berfokus pada kegiatan bersih-bersih lingkungan. Pengguna dapat melaporkan lokasi, mendokumentasikan kegiatan, dan melihat galeri aksi. Admin dapat memantau, memverifikasi, serta mengelola laporan, dokumentasi, kegiatan, dan relawan. Sistem dibangun menggunakan PHP native dan MySQL.',
+      category: 'Lingkungan & Komunitas',
+      duration: '2 bulan',
+      role: 'Fullstack Developer',
+      features: ['Sisi pengguna untuk pelaporan lokasi dan upload dokumentasi', 'Sisi admin untuk verifikasi laporan dan dokumentasi', 'Dashboard monitoring admin', 'Galeri dokumentasi aksi bersih-bersih', 'Autentikasi pengguna dan admin', 'Notifikasi status laporan', 'Manajemen kegiatan dan relawan', 'Desain responsif'],
+      challenges: 'Membangun sistem pelaporan dan dokumentasi yang mudah digunakan, mengelola verifikasi data, serta memastikan keamanan dan kecepatan akses data.',
+      solutions: 'Menggunakan query SQL efisien, validasi input dan upload file, dashboard monitoring admin, serta sistem notifikasi otomatis.'
+    }
+  },
+  'persewaan-konser': {
+    id: {
+      title: 'Website Persewaan Alat Konser',
+      description: 'Website persewaan alat konser dengan fitur admin dan pengguna untuk pemesanan alat secara online menggunakan PHP native dan MySQL.',
+      longDescription: 'Saya mengembangkan website persewaan alat konser dengan sisi admin dan pengguna. Pengguna dapat melihat alat yang tersedia, melakukan pemesanan online, dan menerima konfirmasi otomatis. Admin dapat mengelola alat, stok, jadwal peminjaman, serta memantau proses pemesanan. Sistem menggunakan PHP native dan MySQL.',
+      category: 'Acara & Penyewaan Alat',
+      duration: '3 bulan',
+      role: 'Fullstack Developer',
+      features: ['Sisi pengguna untuk melihat alat dan melakukan pemesanan online', 'Sisi admin untuk mengelola alat, stok, dan jadwal peminjaman', 'Autentikasi pengguna dan admin', 'Notifikasi email konfirmasi pesanan', 'Dashboard monitoring admin', 'Riwayat pemesanan dan manajemen alat', 'Desain responsif'],
+      challenges: 'Membangun sistem pemesanan real-time tanpa framework, memastikan keamanan data, serta mengelola notifikasi otomatis.',
+      solutions: 'Menggunakan query SQL efisien, validasi input ketat, sistem notifikasi email otomatis, dan dashboard monitoring.'
+    }
+  }
+};
+
+export function getLocalizedProject(project: Project, locale: string): Project {
+  if (locale !== 'id') {
+    return project;
+  }
+
+  const translation = projectTranslations[project.id]?.id;
+  return translation ? { ...project, ...translation } : project;
+}
 
 export function getProjectById(id: string): Project | undefined {
   return projects.find(project => project.id === id);

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import FadeIn from '../ui/FadeIn';
+import { useTranslations } from 'next-intl';
 
 const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/amrisabilly' },
@@ -14,6 +15,7 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  const t = useTranslations('contact');
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -45,9 +47,9 @@ export default function Contact() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
                 >
-                  Let's
-                  <span className="block italic font-light">Create</span>
-                  <span className="block">Together</span>
+                  {t('title')}
+                  <span className="block italic font-light">{t('titleAccent')}</span>
+                  <span className="block">{t('titleEnd')}</span>
                 </motion.h2>
                 <motion.div
                   className="mt-6 h-1 bg-black"
@@ -59,7 +61,7 @@ export default function Contact() {
               </div>
 
               <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-lg">
-                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+                {t('description')}
               </p>
 
               {/* Decorative element */}
@@ -93,7 +95,7 @@ export default function Contact() {
                 }}
               >
                 <p className="text-sm uppercase tracking-wider text-gray-600 mb-4">
-                  Email Me
+                  {t('emailMe')}
                 </p>
                 <motion.a
                   href="mailto:amrisabilly@example.com"
@@ -103,14 +105,14 @@ export default function Contact() {
                   amrsabill@gmail.com
                 </motion.a>
                 <Button variant="primary" href="mailto:amrisabilly@example.com">
-                  Send Message
+                  {t('sendMessage')}
                 </Button>
               </motion.div>
 
               {/* Social Links */}
               <div className="space-y-6">
                 <p className="text-sm uppercase tracking-wider text-gray-600">
-                  Connect With Me
+                  {t('connect')}
                 </p>
                 
                 <div className="grid grid-cols-2 gap-4">
@@ -167,7 +169,7 @@ export default function Contact() {
                   transition={{ duration: 2, repeat: Infinity }}
                 />
                 <p className="text-sm font-medium tracking-wider uppercase">
-                  Available for freelance projects
+                  {t('available')}
                 </p>
               </motion.div>
             </div>

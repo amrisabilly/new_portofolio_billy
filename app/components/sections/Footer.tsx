@@ -2,8 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('common');
   const currentYear = new Date().getFullYear();
 
   return (
@@ -48,7 +50,7 @@ export default function Footer() {
               className="text-sm hover:text-gray-400 transition-colors inline-flex items-center gap-2"
               whileHover={{ y: -2 }}
             >
-              Back to Top
+              {t('backToTop')}
               <motion.span
                 className="text-lg"
                 animate={{ y: [-2, 2, -2] }}

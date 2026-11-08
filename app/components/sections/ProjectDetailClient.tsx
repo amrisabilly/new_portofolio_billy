@@ -7,18 +7,23 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Container from '@/app/components/ui/Container';
 import Button from '@/app/components/ui/Button';
-import { getProjectById } from '@/app/data/projects';
+import { getLocalizedProject, getProjectById } from '@/app/data/projects';
+import { useLocale, useTranslations } from 'next-intl';
 
 interface ProjectDetailClientProps {
   projectId: string;
 }
 
 export default function ProjectDetailClient({ projectId }: ProjectDetailClientProps) {
-  const project = getProjectById(projectId);
+  const t = useTranslations('detail');
+  const locale = useLocale();
+  const projectData = getProjectById(projectId);
 
-  if (!project) {
+  if (!projectData) {
     notFound();
   }
+
+  const project = getLocalizedProject(projectData, locale);
 
   return (
     <div className="min-h-screen bg-white">
@@ -37,7 +42,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
             transition={{ duration: 0.8 }}
           >
             <Link href="/#projects" className="inline-flex items-center gap-2 text-sm mb-8 hover:gap-4 transition-all">
-              <span>←</span> Back to Projects
+              <span>←</span> {t('backToProjects')}
             </Link>
             
             <div className="space-y-6">
@@ -58,12 +63,12 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
               <div className="flex flex-wrap gap-4 pt-4">
                 {project.liveDemo && (
                   <Button variant="primary" href={project.liveDemo}>
-                    View Live Demo
+                    {t('liveDemo')}
                   </Button>
                 )}
                 {project.repository && (
                   <Button variant="secondary" href={project.repository}>
-                    View Repository
+                    {t('repository')}
                   </Button>
                 )}
               </div>
@@ -85,7 +90,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                 viewport={{ once: true }}
                 className="space-y-4"
               >
-                <h2 className="text-3xl font-bold">Overview</h2>
+                <h2 className="text-3xl font-bold">{t('overview')}</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   {project.longDescription}
                 </p>
@@ -98,7 +103,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl font-bold">Project Mockups</h2>
+                <h2 className="text-3xl font-bold">{t('mockups')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {project.mockups.map((mockup, idx) => (
                     <motion.div
@@ -132,7 +137,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <h2 className="text-3xl font-bold">Key Features</h2>
+                <h2 className="text-3xl font-bold">{t('features')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {project.features.map((feature, idx) => (
                     <motion.div
@@ -158,14 +163,14 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                   viewport={{ once: true }}
                   className="space-y-6"
                 >
-                  <h2 className="text-3xl font-bold">Challenges & Solutions</h2>
+                  <h2 className="text-3xl font-bold">{t('challenges')}</h2>
                   <div className="space-y-6">
                     <div className="border-l-4 border-black pl-6">
-                      <h3 className="text-xl font-bold mb-2">Challenge</h3>
+                      <h3 className="text-xl font-bold mb-2">{t('challenge')}</h3>
                       <p className="text-gray-700">{project.challenges}</p>
                     </div>
                     <div className="border-l-4 border-gray-300 pl-6">
-                      <h3 className="text-xl font-bold mb-2">Solution</h3>
+                      <h3 className="text-xl font-bold mb-2">{t('solution')}</h3>
                       <p className="text-gray-700">{project.solutions}</p>
                     </div>
                   </div>
@@ -182,26 +187,26 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                 viewport={{ once: true }}
                 className="border-2 border-black p-6 space-y-6"
               >
-                <h3 className="text-xl font-bold">Project Info</h3>
+                <h3 className="text-xl font-bold">{t('projectInfo')}</h3>
                 
                 <div className="space-y-4">
                   <div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">Duration</p>
+                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">{t('duration')}</p>
                     <p className="font-medium">{project.duration}</p>
                   </div>
                   
                   <div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">Role</p>
+                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">{t('role')}</p>
                     <p className="font-medium">{project.role}</p>
                   </div>
                   
                   <div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">Year</p>
+                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">{t('year')}</p>
                     <p className="font-medium">{project.year}</p>
                   </div>
                   
                   <div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">Category</p>
+                    <p className="text-sm text-gray-500 uppercase tracking-wider mb-1">{t('category')}</p>
                     <p className="font-medium">{project.category}</p>
                   </div>
                 </div>
@@ -215,7 +220,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                 transition={{ delay: 0.2 }}
                 className="border-2 border-black p-6 space-y-4"
               >
-                <h3 className="text-xl font-bold">Technologies</h3>
+                <h3 className="text-xl font-bold">{t('technologies')}</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech, idx) => (
                     <motion.span
@@ -240,7 +245,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                 transition={{ delay: 0.3 }}
                 className="border-2 border-black p-6 space-y-4"
               >
-                <h3 className="text-xl font-bold">Links</h3>
+                <h3 className="text-xl font-bold">{t('links')}</h3>
                 <div className="space-y-3">
                   {project.liveDemo && (
                     <a
@@ -249,7 +254,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                       rel="noopener noreferrer"
                       className="flex items-center justify-between p-3 border border-black hover:bg-black hover:text-white transition-colors group"
                     >
-                      <span className="font-medium">Live Demo</span>
+                      <span className="font-medium">{t('liveDemoShort')}</span>
                       <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
                   )}
@@ -260,7 +265,7 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
                       rel="noopener noreferrer"
                       className="flex items-center justify-between p-3 border border-black hover:bg-black hover:text-white transition-colors group"
                     >
-                      <span className="font-medium">Repository</span>
+                      <span className="font-medium">{t('repositoryShort')}</span>
                       <span className="group-hover:translate-x-1 transition-transform">→</span>
                     </a>
                   )}
@@ -275,9 +280,9 @@ export default function ProjectDetailClient({ projectId }: ProjectDetailClientPr
       <section className="bg-black text-white py-20">
         <Container>
           <div className="text-center space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold">View More Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">{t('viewMoreProjects')}</h2>
             <Link href="/#projects">
-              <Button variant="secondary">Back to All Projects</Button>
+              <Button variant="secondary">{t('backToAllProjects')}</Button>
             </Link>
           </div>
         </Container>

@@ -1,6 +1,7 @@
-import { getAllProjectIds, getProjectById } from '@/app/data/projects';
+import { getAllProjectIds, getLocalizedProject, getProjectById } from '@/app/data/projects';
 import ProjectDetailClient from '@/app/components/sections/ProjectDetailClient';
 import { notFound } from 'next/navigation';
+import { getLocale } from 'next-intl/server';
 
 export function generateStaticParams() {
   const projectIds = getAllProjectIds();
@@ -12,8 +13,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const project = getProjectById(id);
+  const locale = await getLocale();
+  const localizedProject = project ? getLocalizedProject(project, locale) : undefined;
   
-  if (!project) {
+  if (!localizedProject) {
     return {
       title: 'Project Not Found - Amri Sabilly Portfolio',
       description: 'Project not found',
@@ -21,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
-    title: `${project.title} - Amri Sabilly Portfolio`,
-    description: project.description,
+    title: `${localizedProject.title} - Amri Sabilly Portfolio`,
+    description: localizedProject.description,
   };
 }
 

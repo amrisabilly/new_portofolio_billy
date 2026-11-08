@@ -5,8 +5,11 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('hero');
+  const common = useTranslations('common');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [scrollY, setScrollY] = useState(0);
 
@@ -94,7 +97,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                Software Developer
+                {t('role')}
               </motion.p>
               
               <div className="space-y-2 md:space-y-4">
@@ -116,8 +119,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 1 }}
               >
                 <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed text-gray-800">
-                  Crafting <span className="font-semibold italic">elegant solutions</span> through 
-                  clean code and innovative design.
+                  {t('tagline')}
                 </p>
               </motion.div>
             </div>
@@ -130,10 +132,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 1.2 }}
             >
               <Button variant="primary" href="#projects">
-                View Projects
+                {common('viewProjects')}
               </Button>
               <Button variant="secondary" href="#contact">
-                Get in Touch
+                {common('getInTouch')}
               </Button>
             </motion.div>
           </div>
@@ -283,7 +285,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1.5 }}
           style={{ opacity: Math.max(0, 1 - scrollY * 0.005) }}
         >
-          <p className="text-xs tracking-widest uppercase text-gray-400">Scroll</p>
+          <p className="text-xs tracking-widest uppercase text-gray-400">{t('scroll')}</p>
           <motion.div
             className="w-px h-16 bg-gradient-to-b from-black to-transparent"
             animate={{ scaleY: [1, 1.2, 1] }}

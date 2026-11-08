@@ -1,0 +1,136 @@
+{
+  "common": {
+    "language": "Bahasa",
+    "english": "Inggris",
+    "indonesian": "Indonesia",
+    "viewProjects": "Lihat Proyek",
+    "getInTouch": "Hubungi Saya",
+    "viewDetails": "Lihat Detail",
+    "viewAllProjects": "Lihat Semua Proyek",
+    "showLess": "Tampilkan Lebih Sedikit",
+    "viewAllCredentials": "Lihat Semua Sertifikasi",
+    "issued": "Diterbitkan:",
+    "backToTop": "Kembali ke Atas"
+  },
+  "hero": {
+    "role": "Pengembang Perangkat Lunak",
+    "tagline": "Menciptakan solusi elegan melalui kode yang bersih dan desain inovatif.",
+    "scroll": "Gulir"
+  },
+  "about": {
+    "title": "Tentang",
+    "titleAccent": "Saya",
+    "paragraph1": "Saya adalah mahasiswa Sistem Informasi yang tidak hanya mempelajari pemrograman, tetapi juga memahami bisnis secara menyeluruh. Selama kuliah, saya mempelajari pengembangan situs web dan aplikasi serta keamanan informasi.",
+    "paragraph2": "Di luar perkuliahan, saya aktif dalam komunitas pengembangan web dan berpartisipasi dalam berbagai proyek. Pengalaman ini memperluas perspektif saya dan meningkatkan kemampuan untuk menggabungkan keterampilan teknis dengan wawasan bisnis guna menciptakan solusi digital yang relevan dan inovatif.",
+    "paragraph3": "Saya percaya pada pembelajaran berkelanjutan untuk menghadirkan solusi inovatif yang memberikan dampak nyata.",
+    "yearsExp": "Tahun Pengalaman",
+    "projects": "Proyek",
+    "clients": "Klien"
+  },
+  "skills": {
+    "title": "Keahlian &",
+    "titleAccent": "Kompetensi"
+  },
+  "projects": {
+    "title": "Proyek",
+    "titleAccent": "Unggulan",
+    "description": "Pilihan karya terbaru saya yang menampilkan berbagai teknologi dan pendekatan pemecahan masalah."
+  },
+  "certificates": {
+    "title": "Sertifikasi &",
+    "titleAccent": "Kredensial"
+  },
+  "experience": {
+    "title": "Pengalaman &",
+    "titleAccent": "Pendidikan",
+    "work": "Pengalaman Kerja",
+    "education": "Pendidikan",
+    "jobs": {
+      "naga": {
+        "role": "Fullstack Developer",
+        "company": "Naga Cargo",
+        "period": "2025 - Sekarang",
+        "description": "Mengembangkan solusi end-to-end untuk sistem manajemen kargo, mencakup pengembangan aplikasi web dan mobile.",
+        "achievement1": "Membangun website manajemen kargo",
+        "achievement2": "Mengembangkan aplikasi mobile",
+        "achievement3": "Menerapkan solusi full-stack"
+      },
+      "berbinar": {
+        "role": "Backend Developer",
+        "company": "PT Berbinar Insightfull",
+        "period": "2024 - Sekarang",
+        "description": "Mengembangkan dan memelihara sistem backend untuk berbagai aplikasi web, termasuk pengujian psikologi, e-learning, dan platform manajemen staf internal.",
+        "achievement1": "Membangun website pengujian psikologi",
+        "achievement2": "Mengembangkan platform e-learning",
+        "achievement3": "Membuat website manajemen staf internal"
+      },
+      "community": {
+        "role": "Wakil Ketua Komunitas Website",
+        "company": "Himasisfo UPNYK",
+        "period": "2023 - 2024",
+        "description": "Memimpin inisiatif komunitas website dan mengoordinasikan tim untuk membangun serta memelihara kehadiran digital organisasi.",
+        "achievement1": "Membangun website KSM Himasisfo",
+        "achievement2": "Mengoordinasikan tim pengembangan website",
+        "achievement3": "Mengelola kegiatan komunitas website"
+      },
+      "frontend": {
+        "role": "Frontend Developer",
+        "company": "Himasisfo UPNYK",
+        "period": "2023 - 2024",
+        "description": "Membangun antarmuka web yang responsif dan mudah diakses. Berkolaborasi dengan desainer untuk mengubah mockup menjadi implementasi yang presisi.",
+        "achievement1": "Membangun website yang responsif dan interaktif",
+        "achievement2": "Mengoptimalkan performa dan aksesibilitas",
+        "achievement3": "Mengembangkan komponen UI yang dapat digunakan kembali"
+      }
+    },
+    "educationItems": {
+      "bachelor": {
+        "degree": "Sarjana Sistem Informasi",
+        "institution": "UPN Veteran Yogyakarta",
+        "period": "2023 - sekarang",
+        "details": "Lulus dengan predikat kehormatan. Berfokus pada Sistem Informasi, Analisis Bisnis, dan Pengembangan Aplikasi."
+      }
+    }
+  },
+  "contact": {
+    "title": "Mari",
+    "titleAccent": "Berkarya",
+    "titleEnd": "Bersama",
+    "description": "Saya selalu terbuka untuk mendiskusikan proyek baru, ide kreatif, atau kesempatan untuk menjadi bagian dari visi Anda.",
+    "emailMe": "Email Saya",
+    "sendMessage": "Kirim Pesan",
+    "connect": "Terhubung Dengan Saya",
+    "available": "Tersedia untuk proyek freelance"
+  },
+  "detail": {
+    "backToProjects": "Kembali ke Proyek",
+    "backToCertificates": "Kembali ke Sertifikasi",
+    "liveDemo": "Lihat Demo Langsung",
+    "repository": "Lihat Repositori",
+    "viewMoreProjects": "Lihat Proyek Lainnya",
+    "backToAllProjects": "Kembali ke Semua Proyek",
+    "technologies": "Teknologi",
+    "links": "Tautan",
+    "liveDemoShort": "Demo Langsung",
+    "repositoryShort": "Repositori",
+    "overview": "Ringkasan",
+    "mockups": "Mockup Proyek",
+    "features": "Fitur Utama",
+    "challenges": "Tantangan & Solusi",
+    "challenge": "Tantangan",
+    "solution": "Solusi",
+    "projectInfo": "Info Proyek",
+    "duration": "Durasi",
+    "role": "Peran",
+    "year": "Tahun",
+    "category": "Kategori",
+    "verify": "Verifikasi Sertifikat",
+    "about": "Tentang",
+    "skillsCovered": "Keahlian yang Dipelajari",
+    "certificateDetails": "Detail Sertifikat",
+    "certificateId": "ID Sertifikat",
+    "issuedBy": "Diterbitkan Oleh",
+    "yearObtained": "Tahun Diperoleh",
+    "notFound": "Sertifikat tidak ditemukan"
+  }
+}

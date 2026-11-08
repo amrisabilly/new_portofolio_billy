@@ -5,13 +5,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Container from '../ui/Container';
 import FadeIn from '../ui/FadeIn';
-import { certificates } from '@/app/data/certificates';
+import { certificates, getLocalizedCertificate } from '@/app/data/certificates';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Certificates() {
+  const t = useTranslations('certificates');
+  const common = useTranslations('common');
+  const locale = useLocale();
+  const localizedCertificates = certificates.map((certificate) => getLocalizedCertificate(certificate, locale));
   const [showAll, setShowAll] = useState(false);
   const maxInitialCerts = 6; // 2 rows x 3 columns
-  const displayedCerts = showAll ? certificates : certificates.slice(0, maxInitialCerts);
-  const hasMoreCerts = certificates.length > maxInitialCerts;
+  const displayedCerts = showAll ? localizedCertificates : localizedCertificates.slice(0, maxInitialCerts);
+  const hasMoreCerts = localizedCertificates.length > maxInitialCerts;
 
   return (
     <section id="certificates" className="relative bg-white py-20 md:py-32">
@@ -20,8 +25,8 @@ export default function Certificates() {
         <FadeIn>
           <div className="mb-16 md:mb-24">
             <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-              Certifications &
-              <span className="block italic font-light">Credentials</span>
+              {t('title')}
+              <span className="block italic font-light">{t('titleAccent')}</span>
             </h2>
             <motion.div
               className="mt-6 h-1 bg-black"
@@ -77,14 +82,14 @@ export default function Certificates() {
                         {cert.issuer}
                       </p>
                       <p className="text-sm text-gray-500">
-                        Issued: {cert.year}
+                        {common('issued')} {cert.year}
                       </p>
                     </div>
 
                     {/* View Details CTA */}
                     <div className="pt-2">
                       <span className="text-sm font-medium group-hover:underline">
-                        View Details →
+                        {common('viewDetails')} →
                       </span>
                     </div>
                   </div>
@@ -123,12 +128,12 @@ export default function Certificates() {
             >
               {showAll ? (
                 <>
-                  Show Less
+                  {common('showLess')}
                   <motion.span className="text-2xl">↑</motion.span>
                 </>
               ) : (
                 <>
-                  View All Credentials 
+                  {common('viewAllCredentials')} 
                   <motion.span
                     className="text-2xl"
                     animate={{ x: [0, 5, 0] }}

@@ -4,23 +4,27 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { getCertificateById } from '@/app/data/certificates';
+import { getCertificateById, getLocalizedCertificate } from '@/app/data/certificates';
 import Container from '../ui/Container';
+import { useLocale, useTranslations } from 'next-intl';
 
 interface CertificateDetailClientProps {
   certificateId: string;
 }
 
 export default function CertificateDetailClient({ certificateId }: CertificateDetailClientProps) {
-  const certificate = getCertificateById(certificateId);
+  const t = useTranslations('detail');
+  const locale = useLocale();
+  const certificateData = getCertificateById(certificateId);
 
-  if (!certificate) {
+  if (!certificateData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-2xl">Certificate not found</p>
+        <p className="text-2xl">{t('notFound')}</p>
       </div>
     );
   }
+  const certificate = getLocalizedCertificate(certificateData, locale);
 
   return (
     <div className="min-h-screen bg-white">
@@ -39,7 +43,7 @@ export default function CertificateDetailClient({ certificateId }: CertificateDe
               className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors"
             >
               <span className="text-2xl">←</span>
-              <span>Back to Certificates</span>
+              <span>{t('backToCertificates')}</span>
             </Link>
           </motion.div>
 
@@ -59,12 +63,12 @@ export default function CertificateDetailClient({ certificateId }: CertificateDe
 
             <div className="flex flex-wrap gap-4 text-lg text-white/80">
               <div className="flex items-center gap-2">
-                <span className="font-mono">Issuer:</span>
+                <span className="font-mono">{t('issuedBy')}:</span>
                 <span className="font-semibold">{certificate.issuer}</span>
               </div>
               <span className="text-white/40">•</span>
               <div className="flex items-center gap-2">
-                <span className="font-mono">Year:</span>
+                <span className="font-mono">{t('year')}:</span>
                 <span className="font-semibold">{certificate.year}</span>
               </div>
             </div>
@@ -101,7 +105,7 @@ export default function CertificateDetailClient({ certificateId }: CertificateDe
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  Verify Certificate →
+                  {t('verify')} →
                 </motion.a>
               )}
             </motion.div>
@@ -115,7 +119,7 @@ export default function CertificateDetailClient({ certificateId }: CertificateDe
             >
               {/* Description */}
               <div>
-                <h2 className="text-3xl font-bold mb-4">About</h2>
+                <h2 className="text-3xl font-bold mb-4">{t('about')}</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   {certificate.description}
                 </p>
@@ -123,7 +127,7 @@ export default function CertificateDetailClient({ certificateId }: CertificateDe
 
               {/* Skills */}
               <div>
-                <h2 className="text-3xl font-bold mb-4">Skills Covered</h2>
+                <h2 className="text-3xl font-bold mb-4">{t('skillsCovered')}</h2>
                 <div className="flex flex-wrap gap-3">
                   {certificate.skills.map((skill, idx) => (
                     <motion.span
@@ -142,18 +146,18 @@ export default function CertificateDetailClient({ certificateId }: CertificateDe
 
               {/* Certificate Details */}
               <div className="border-2 border-black p-6 bg-gray-50">
-                <h3 className="text-xl font-bold mb-4">Certificate Details</h3>
+                <h3 className="text-xl font-bold mb-4">{t('certificateDetails')}</h3>
                 <div className="space-y-3">
                   <div>
-                    <p className="text-sm text-gray-600">Certificate ID</p>
+                    <p className="text-sm text-gray-600">{t('certificateId')}</p>
                     <p className="font-mono text-sm">{certificate.shortId}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Issued By</p>
+                    <p className="text-sm text-gray-600">{t('issuedBy')}</p>
                     <p className="font-semibold">{certificate.issuer}</p>
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600">Year Obtained</p>
+                    <p className="text-sm text-gray-600">{t('yearObtained')}</p>
                     <p className="font-semibold">{certificate.year}</p>
                   </div>
                 </div>

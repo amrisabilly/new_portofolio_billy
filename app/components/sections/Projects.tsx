@@ -6,11 +6,16 @@ import Link from 'next/link';
 import Container from '../ui/Container';
 import Card from '../ui/Card';
 import FadeIn from '../ui/FadeIn';
-import { projects } from '@/app/data/projects';
+import { getLocalizedProject, projects } from '@/app/data/projects';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Projects() {
+  const t = useTranslations('projects');
+  const common = useTranslations('common');
+  const locale = useLocale();
   const [showAll, setShowAll] = React.useState(false);
-  const displayedProjects = showAll ? projects : projects.slice(0, 4);
+  const localizedProjects = projects.map((project) => getLocalizedProject(project, locale));
+  const displayedProjects = showAll ? localizedProjects : localizedProjects.slice(0, 4);
   return (
     <section id="projects" className="relative bg-gray-50 py-20 md:py-32">
       <Container>
@@ -20,8 +25,8 @@ export default function Projects() {
             <div className="flex items-end justify-between flex-wrap gap-4">
               <div>
                 <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-                  Featured
-                  <span className="block italic font-light">Projects</span>
+                  {t('title')}
+                  <span className="block italic font-light">{t('titleAccent')}</span>
                 </h2>
                 <motion.div
                   className="mt-6 h-1 bg-black"
@@ -32,7 +37,7 @@ export default function Projects() {
                 />
               </div>
               <p className="text-lg text-gray-600 max-w-md">
-                A selection of my recent work showcasing various technologies and problem-solving approaches.
+                {t('description')}
               </p>
             </div>
           </div>
@@ -97,7 +102,7 @@ export default function Projects() {
 
                     {/* Link */}
                     <div className="pt-4 flex items-center gap-2 text-sm font-medium group-hover:gap-4 transition-all">
-                      <span>View Details</span>
+                      <span>{common('viewDetails')}</span>
                       <span>→</span>
                     </div>
                   </div>
@@ -122,7 +127,7 @@ export default function Projects() {
               className="px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition"
               onClick={() => setShowAll(true)}
             >
-              View All Projects
+              {common('viewAllProjects')}
             </button>
           </div>
         )}
@@ -132,7 +137,7 @@ export default function Projects() {
               className="px-6 py-3 bg-gray-200 text-black rounded-lg font-semibold hover:bg-gray-300 transition"
               onClick={() => setShowAll(false)}
             >
-              Show Less
+              {common('showLess')}
             </button>
           </div>
         )}

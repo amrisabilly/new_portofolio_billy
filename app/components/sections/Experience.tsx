@@ -4,64 +4,35 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Container from '../ui/Container';
 import FadeIn from '../ui/FadeIn';
+import { useTranslations } from 'next-intl';
 
 const experiences = [
   {
-    role: 'Fullstack Developer',
-    company: 'Naga Cargo',
-    period: '2025 - Present',
-    description: 'Developing end-to-end solutions for cargo management system, handling both web and mobile application development.',
-    achievements: [
-      'Built cargo management website',
-      'Developed mobile application',
-      'Implemented full-stack solutions'
-    ]
+    key: 'naga',
+    achievements: ['achievement1', 'achievement2', 'achievement3']
   },
   {
-    role: 'Backend Developer',
-    company: 'PT Berbinar Insightfull',
-    period: '2024 - Present',
-    description: 'Developing and maintaining backend systems for various web applications including psychological testing, e-learning, and internal staff management platforms.',
-    achievements: [
-      'Built psychological testing website',
-      'Developed e-learning platform',
-      'Created internal staff management website'
-    ]
+    key: 'berbinar',
+    achievements: ['achievement1', 'achievement2', 'achievement3']
   },
   {
-    role: 'Vice Chairman of the Website Community',
-    company: 'Himasisfo UPNYK',
-    period: '2023 - 2024',
-    description: 'Led website community initiatives and coordinated team efforts to build and maintain organizational web presence.',
-    achievements: [
-      'Built KSM Himasisfo website',
-      'Coordinated website development team',
-      'Managed website community activities'
-    ]
+    key: 'community',
+    achievements: ['achievement1', 'achievement2', 'achievement3']
   },
   {
-    role: 'Frontend Developer',
-    company: 'Himasisfo UPNYK',
-    period: '2023 - 2024',
-    description: 'Built responsive and accessible web interfaces. Collaborated with designers to transform mockups into pixel-perfect implementations.',
-    achievements: [
-      'Built responsive and interactive websites ',
-      'Optimized performance and accessibility',
-      'Developed reusable UI components'
-    ]
+    key: 'frontend',
+    achievements: ['achievement1', 'achievement2', 'achievement3']
   }
 ];
 
 const education = [
   {
-    degree: 'Bachelor of Information Systems',
-    institution: 'UPN Veteran Yogyakarta',
-    period: '2023 - now',
-    details: 'Graduated with Honors. Focus on Information Systems, Business Analysis, and Application Development.'
+    key: 'bachelor'
   }
 ];
 
 export default function Experience() {
+  const t = useTranslations('experience');
   return (
     <section id="experience" className="relative bg-black text-white py-20 md:py-32 overflow-hidden">
       {/* Background decoration */}
@@ -78,8 +49,8 @@ export default function Experience() {
         <FadeIn>
           <div className="mb-16 md:mb-24">
             <h2 className="text-5xl md:text-7xl font-bold tracking-tight">
-              Experience &
-              <span className="block italic font-light">Education</span>
+              {t('title')}
+              <span className="block italic font-light">{t('titleAccent')}</span>
             </h2>
             <motion.div
               className="mt-6 h-1 bg-white"
@@ -94,13 +65,13 @@ export default function Experience() {
         {/* Experience Timeline */}
         <div className="mb-24">
           <h3 className="text-2xl font-bold mb-12 tracking-wider uppercase">
-            Work Experience
+            {t('work')}
           </h3>
           
           <div className="space-y-12">
             {experiences.map((exp, idx) => (
               <motion.div
-                key={`${exp.company}-${exp.role}-${idx}`}
+                key={`${exp.key}-${idx}`}
                 className="relative pl-8 border-l-2 border-gray-700 hover:border-white transition-colors duration-300"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -122,7 +93,7 @@ export default function Experience() {
                   {/* Period */}
                   <div className="md:col-span-3">
                     <p className="text-sm font-mono text-gray-400 tracking-wider">
-                      {exp.period}
+                      {t(`jobs.${exp.key}.period`)}
                     </p>
                   </div>
 
@@ -130,15 +101,15 @@ export default function Experience() {
                   <div className="md:col-span-9 space-y-4">
                     <div>
                       <h4 className="text-2xl font-bold mb-1">
-                        {exp.role}
+                        {t(`jobs.${exp.key}.role`)}
                       </h4>
                       <p className="text-lg text-gray-400">
-                        {exp.company}
+                        {t(`jobs.${exp.key}.company`)}
                       </p>
                     </div>
 
                     <p className="text-gray-300 leading-relaxed">
-                      {exp.description}
+                      {t(`jobs.${exp.key}.description`)}
                     </p>
 
                     {/* Achievements */}
@@ -153,7 +124,7 @@ export default function Experience() {
                           transition={{ delay: idx * 0.2 + achIdx * 0.1 }}
                         >
                           <span className="mr-3 mt-2 h-1 w-1 bg-white shrink-0"></span>
-                          <span>{achievement}</span>
+                          <span>{t(`jobs.${exp.key}.${achievement}`)}</span>
                         </motion.li>
                       ))}
                     </ul>
@@ -168,13 +139,13 @@ export default function Experience() {
         <FadeIn delay={400}>
           <div>
             <h3 className="text-2xl font-bold mb-12 tracking-wider uppercase">
-              Education
+              {t('education')}
             </h3>
             
             <div className="space-y-8">
-              {education.map((edu, idx) => (
+              {education.map((edu) => (
                 <motion.div
-                  key={edu.degree}
+                  key={edu.key}
                   className="border-2 border-white p-8"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -188,17 +159,17 @@ export default function Experience() {
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                     <h4 className="text-2xl font-bold">
-                      {edu.degree}
+                      {t(`educationItems.${edu.key}.degree`)}
                     </h4>
                     <p className="text-sm font-mono text-gray-400 tracking-wider">
-                      {edu.period}
+                      {t(`educationItems.${edu.key}.period`)}
                     </p>
                   </div>
                   <p className="text-xl text-gray-400 mb-2">
-                    {edu.institution}
+                    {t(`educationItems.${edu.key}.institution`)}
                   </p>
                   <p className="text-gray-400">
-                    {edu.details}
+                    {t(`educationItems.${edu.key}.details`)}
                   </p>
                 </motion.div>
               ))}
